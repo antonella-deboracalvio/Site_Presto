@@ -7,3 +7,8 @@ use App\Http\Controllers\ArticleController;
 Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
 
 Route::get('/articles/create', [ArticleController::class, 'createArticle'])->name('createArticle'); 
+
+Route::get('/articles/index', [ArticleController::class, 'indexArticle'])->name('indexArticle'); 
+
+
+
