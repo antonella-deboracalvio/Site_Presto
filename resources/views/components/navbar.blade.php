@@ -11,10 +11,10 @@
           </li>
           @guest
           <li class="nav-item">
-            <a class="nav-link" href="#">Accedi</a>
+            <a class="nav-link" href="{{ route('login') }}">Accedi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Registrati</a>
+            <a class="nav-link" href="{{ route('register') }}">Registrati</a>
           </li>
 
           @else
@@ -22,13 +22,9 @@
             <a class="nav-link" href="#">Benvenuto {{ Auth::user()->name }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Logout</a>
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="#" class="dropdown-item" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
-                </li>
-
-                <form action="{{ route('logout') }}" method="post">@csrf</form>
+          
+          
+                  <form  class="dropdown-item" action="{{ route('logout') }}" method="post">@csrf  <button class="btn btn-danger" type="submit"> Logout </button> </form>
             </ul>
           </li>
           @endguest
