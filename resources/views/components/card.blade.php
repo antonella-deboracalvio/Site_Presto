@@ -5,16 +5,15 @@
         <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
       </a>
     </div>
-    <div class="card-header">{{$article->category->name}}</div>
+    <a href="#" class="card-header text-decoration-none">{{$article->category->name}}</a>
     <div class="card-body">
       <h5 class="card-title"> {{ $article->title }}</h5>
-      <h5 class="card-title"> {{ $article->price }}</h5>
+      <h5 class="card-title">€{{ $article->price }}</h5>
       <p class="card-text">
         Some quick example text to build on the card title and make up the bulk of the
         card's content.
       </p>
-      <button type="button" class="btn btn-primary">Dettaglio</button>
-      <button type="button" class="btn btn-primary">Categoria</button>
+      <a href="{{route('detailArticle', compact('article'))}}" class="btn btn-primary">Maggiori Informazioni</a>
     </div>
-    <div class="card-footer">{{$article->created_at}}</div>
+    <div class="card-footer">{{$article->created_at->diffForHumans()}}</div>
   </div>

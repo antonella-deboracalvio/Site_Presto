@@ -25,5 +25,10 @@ class ArticleController extends Controller implements HasMiddleware
         $articles = Article::orderBy('created_at', 'desc')->paginate(6);
         return view('articles.indexArticle', compact('articles'));
     }
+
+    public function detailArticle(Article $article)
+    {
+        return view('articles.detailArticle', compact('article'));
+    }
     
 }

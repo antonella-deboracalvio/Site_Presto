@@ -1,0 +1,58 @@
+:root{
+    --main: #0081A7;
+    --sec: #00AFB9;
+    --ter: #FDFCDC;
+    --quar: #FED9B7;
+    --acc: #F07167;
+}
+
+/* colori di sfondo */
+.my-bg-main{
+    background-color: var(--main);
+}
+.my-bg-sec{    
+    background-color: var(--sec);    
+}
+.my-bg-ter{
+    background-color: var(--ter);
+}
+.my-bg-quar{
+    background-color: var(--quar);
+}
+.my-bg-acc{
+    background-color: var(--acc);
+}
+
+/* colori dei testi */
+.my-text-main{
+    color: var(--main);
+}
+.my-text-sec{
+    color: var(--sec);
+}
+.my-text-ter{
+    color: var(--ter);
+}
+.my-text-quar{
+    color: var(--quar);
+}
+.my-text-acc{
+    color: var(--acc);
+}
+
+/* colori dei bordi */
+.my-border-main{
+    border-color: var(--main);
+}
+.my-border-sec{
+    border-color: var(--sec);
+}
+.my-border-ter{
+    border-color: var(--ter);
+}
+.my-border-quar{
+    border-color: var(--quar);
+}
+.my-border-acc{
+    border-color: var(--acc);
+}   
