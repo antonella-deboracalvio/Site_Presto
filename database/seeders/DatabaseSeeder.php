@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
      * Seed the application's database.
      */
 
-     public $categories=[
+    public $categories=[
         'elettronica',
         'abbigliamento',
         'salute e bellezza',
@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         'libri e riviste',
         'accessori',
         'motori'
-     ];
+    ];
 
 
     public function run(): void
