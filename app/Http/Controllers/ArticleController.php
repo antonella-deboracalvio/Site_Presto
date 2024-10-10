@@ -13,9 +13,9 @@ class ArticleController extends Controller implements HasMiddleware
         return view('articles.createArticleForm');
     }
 
-    public function middleware(): array{
+    public static function middleware(): array{
         return [
-            new Middleware('auth', only: ['createArticle'])
+            new Middleware('auth', only: ['createArticle']),
         ];
     }
 }
