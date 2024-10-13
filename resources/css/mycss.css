@@ -1,9 +1,9 @@
 :root {
-    --main: #0081A7;
-    --sec: #00AFB9;
-    --ter: #FDFCDC;
-    --quar: #FED9B7;
-    --acc: #F07167;
+    --main: #141B41;
+    --sec: #306BAC;
+    --ter: #6F9CEB;
+    --quar: #D2C0F5;
+    --acc: #F35B04;
 }
 
 /* colori di sfondo */
@@ -69,90 +69,10 @@
     border-color: var(--acc);
 }
 
-
-/* .card-custom{
-    transition: 0.5s;
-}
-
-.card-custom:hover{
-    transform: scale(1.05);
-    transition: 0.5s;
-} */
-
-
-
-/* prova carosello bello */
-
-/* .img-fluid{
-    border-radius: 5px;
-}
-
-.wrapper {
-    left: calc(50% - 300px);
-}
-
-.card-custom {
-    padding: 0%;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0rem 0 1rem #17172bc4;
-    transition: 0.4s ease-out;
-    position: relative;
-    left: 0px;
-}
-
-.card-custom:not(:first-child) {
-    margin-left: -50px;
-}
-
-.card-custom:hover {
-    transform: translateY(-20px);
-    transition: 0.4s ease-out;
-}
-
-.card-custom:hover~.card-custom {
-    position: relative;
-    left: 50px;
-    transition: 0.4s ease-out;
-}
-
-/* media query */
-
-/* @media screen and (max-width: 700px) {
-
-    .wrapper {
-        left: 0px;
-    }
-
-    .row-custom {
-        justify-content: space-between;
-    }
-    
-    .card-custom {
-        transition: 0.4s ease-out;
-        position: relative;
-        left: 0px;
-    }
-    
-    .card-custom:not(:first-child) {
-        margin-left: 0px;
-    }
-    
-    .card-custom:hover {
-        transform: scale(1.05);
-        transition: 0.4s ease-out;
-    }
-    
-    .card-custom:hover~.card-custom {
-        position: relative;
-        left: 0px;
-        transition: 0.4s ease-out;
-    }
-} */ 
-
+/* WELCOME */
 
 .articles-home{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1588609460031-22705bc49db0?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image:linear-gradient(#141b41c2, #141b41c2), url("https://images.unsplash.com/photo-1588609460031-22705bc49db0?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -163,24 +83,67 @@
 }
 
 .articles-home:hover{
-    transform: scale(1.05) !important;
+    z-index: 99;
+    transform: scale(1.01) !important;
     transition: 0.5s !important;
+    box-shadow:
+    2.8px 4.2px 2.7px rgba(0, 0, 0, 0.081),
+    6.3px 9.3px 6.9px rgba(0, 0, 0, 0.089),
+    10.8px 15.8px 13.2px rgba(0, 0, 0, 0.09),
+    16.6px 24.4px 22.2px rgba(0, 0, 0, 0.089),
+    24.6px 36.2px 34.8px rgba(0, 0, 0, 0.087),
+    36.2px 53.2px 52.4px rgba(0, 0, 0, 0.083),
+    54.2px 79.7px 76.1px rgba(0, 0, 0, 0.079),
+    86.4px 127px 102.9px rgba(0, 0, 0, 0.075),
+    162px 238px 124px rgba(0, 0, 0, 0.07) !important;
 }
 
 .container-vetro{
     
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #306cac46;
+    box-shadow: 0rem 0 1rem #000000c4;
     border-radius: 10px;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(5px);
     height: 10rem;
     color: white;
+    transition: 0.5s;
 }
+
+.container-vetro:hover{
+    background-color: #6f9ceb86;
+    color: black;
+    transition: 0.5s;
+}
+
+.btn-info-custom{
+    transition: 0.5s;
+}
+.btn-info-custom:hover{
+    background-color: #e5d8ff !important;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 10px var(--main);
+    transition: 0.5s;
+}
+
+/* FINE WELCOME */
+
+
+
+
+
+
+
 
 /* media query */
 
 @media screen and (max-width: 700px) {
 
+    /* WELCOME */
+    .articles-home{
+        min-height: 20vh;
+    }
+    
     .container-vetro{
         height: 5rem;
     }
@@ -197,4 +160,5 @@
         font-size: 0.6rem;
     }
     
+    /* FINE WELCOME */
 }
