@@ -1,4 +1,4 @@
-<div class="card  ">
+<div class="card">
     <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
       <img src="https://mdbootstrap.com/img/new/standard/nature/111.webp" class="img-fluid" />
       <a href="#!">
@@ -9,10 +9,6 @@
     <div class="card-body">
       <h5 class="card-title"> {{ $article->title }}</h5>
       <h5 class="card-title">€{{ $article->price }}</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk of the
-        card's content.
-      </p>
       <a href="{{route('detailArticle', compact('article'))}}" class="btn btn-primary">Maggiori Informazioni</a>
     </div>
     <div class="card-footer">{{$article->created_at->diffForHumans()}}</div>

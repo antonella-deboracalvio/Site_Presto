@@ -1,4 +1,4 @@
-:root{
+:root {
     --main: #0081A7;
     --sec: #00AFB9;
     --ter: #FDFCDC;
@@ -7,52 +7,141 @@
 }
 
 /* colori di sfondo */
-.my-bg-main{
+.my-bg-main {
     background-color: var(--main);
 }
-.my-bg-sec{    
-    background-color: var(--sec);    
+
+.my-bg-sec {
+    background-color: var(--sec);
 }
-.my-bg-ter{
+
+.my-bg-ter {
     background-color: var(--ter);
 }
-.my-bg-quar{
+
+.my-bg-quar {
     background-color: var(--quar);
 }
-.my-bg-acc{
+
+.my-bg-acc {
     background-color: var(--acc);
 }
 
 /* colori dei testi */
-.my-text-main{
+.my-text-main {
     color: var(--main);
 }
-.my-text-sec{
+
+.my-text-sec {
     color: var(--sec);
 }
-.my-text-ter{
+
+.my-text-ter {
     color: var(--ter);
 }
-.my-text-quar{
+
+.my-text-quar {
     color: var(--quar);
 }
-.my-text-acc{
+
+.my-text-acc {
     color: var(--acc);
 }
 
 /* colori dei bordi */
-.my-border-main{
+.my-border-main {
     border-color: var(--main);
 }
-.my-border-sec{
+
+.my-border-sec {
     border-color: var(--sec);
 }
-.my-border-ter{
+
+.my-border-ter {
     border-color: var(--ter);
 }
-.my-border-quar{
+
+.my-border-quar {
     border-color: var(--quar);
 }
-.my-border-acc{
+
+.my-border-acc {
     border-color: var(--acc);
-}   
+}
+
+
+/* .card-custom{
+    transition: 0.5s;
+}
+
+.card-custom:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+} */
+
+
+
+/* prova carosello bello */
+
+.img-fluid{
+    border-radius: 5px;
+}
+
+.wrapper {
+    left: calc(50% - 300px);
+}
+
+.card-custom {
+    padding: 0%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+}
+
+.card-custom:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card-custom:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+}
+
+.card-custom:hover~.card-custom {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+}
+
+/* media query */
+
+@media screen and (max-width: 700px) {
+
+    .wrapper {
+        left: 0px;
+    }
+    
+    .card-custom {
+        transition: 0.4s ease-out;
+        position: relative;
+        left: 0px;
+    }
+    
+    .card-custom:not(:first-child) {
+        margin-left: 0px;
+    }
+    
+    .card-custom:hover {
+        transform: scale(1.05);
+        transition: 0.4s ease-out;
+    }
+    
+    .card-custom:hover~.card-custom {
+        position: relative;
+        left: 0px;
+        transition: 0.4s ease-out;
+    }
+}
