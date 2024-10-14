@@ -23,21 +23,19 @@
 
 
 
-
+{{-- offcanvas con form di login/register --}}
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
             
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="my-bg-quar btn-info-custom btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
             
-
-
             @guest
-            <div class="accordion " id="accordionExample">
-                <div class="accordion-item">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item my-bg-sec">
                   <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button my-bg-main text-white collapsed btn-accordion-custom" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       Accedi
                     </button>
                   </h2>
@@ -46,25 +44,25 @@
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
         
-                            <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Email</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
-                            
+                            <div class="mb-3 container-custom">
+                              
+                              <input placeholder="Email" type="email" class="input-custom w-100" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
                             </div>
-                            <div class="mb-3">
-                              <label for="exampleInputPassword1" class="form-label">Password</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+
+                            <div class="mb-3 container-custom">
+                              
+                              <input placeholder="Password" type="password" class="input-custom w-100" id="exampleInputPassword1" name="password">
                             </div>
                           
-                            <button type="submit" class="btn btn-primary">Accedi</button>
+                            <button type="submit" class="btn btn-info-custom my-bg-quar">Accedi</button>
                           </form>
                     </div>
                   </div>
                 </div>
                 
-                <div class="accordion-item">
+                <div class="accordion-item my-bg-sec">
                   <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <button class="accordion-button my-bg-main text-white collapsed btn-accordion-custom" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Registrati
                     </button>
                   </h2>
@@ -72,29 +70,20 @@
                     <div class="accordion-body">
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
-                            <div class="mb-3">
-                                <label for="nome" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="nome" name="name">
-                                
+                            <div class="mb-3 container-custom">
+                                <input placeholder="Nome" type="text" class="input-custom w-100" id="nome" name="name">
+                            </div>
+                            <div class="mb-3 container-custom">
+                                <input placeholder="Email" type="email" class="input-custom w-100" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                            </div>
+                            <div class="mb-3 container-custom">
+                                <input placeholder="Password" type="password" class="input-custom w-100" id="exampleInputPassword1" name="password">
+                            </div>
+                            <div class="mb-3 container-custom">
+                                <input placeholder="Conferma Password" type="password" class="input-custom w-100" id="exampleInputPassword1" name="password_confirmation">
                             </div>
                             
-                            
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
-                                
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
-                            </div>
-                            
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Conferma Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" name="password_confirmation">
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary">Registrati</button>
+                            <button type="submit" class="btn btn-info-custom my-bg-quar">Registrati</button>
                         </form>
                     </div>
                   </div>
