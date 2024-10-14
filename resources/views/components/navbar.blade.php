@@ -12,7 +12,7 @@
             </li>
         </ul>
         
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown list-unstyled">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             Categorie

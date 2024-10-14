@@ -24,12 +24,12 @@
 }
 
 .my-bg-acc {
-    background-color: var(--acc);
+    background-color: var(--acc) !important;
 }
 
 /* colori dei testi */
 .my-text-main {
-    color: var(--main);
+    color: var(--main) !important;
 }
 
 .my-text-sec {
@@ -206,6 +206,7 @@
 
 .btn-accordion-custom:focus, .btn-accordion-custom:not(.collapsed){
     background-color: var(--sec) !important;
+    border: var(--main) !important;
 }
 
 .btn-accordion-custom::after {
@@ -213,6 +214,30 @@
 }
 
 /* FINE OFFCANVAS */
+
+
+/* paginator */
+
+.pagination-custom{
+    border-radius: 10%;
+    border: none;
+
+}
+
+.pagination-custom:focus{
+    box-shadow: none !important;
+}
+
+.container-pagination{
+    background-color: var(--quar);
+    border-radius: 5%;
+    align-items: center;
+    
+}
+
+/* .pagination-custom{
+    background-color: var(--acc) !important;
+} */
 
 
 /* media query */

@@ -9,7 +9,7 @@
     <div class="card-body">
       <h5 class="card-title"> {{ $article->title }}</h5>
       <h5 class="card-title">€{{ $article->price }}</h5>
-      <a href="{{route('detailArticle', compact('article'))}}" class="btn btn-primary">Maggiori Informazioni</a>
+      <a href="{{route('detailArticle', compact('article'))}}" class="btn my-bg-quar btn-info-custom">Maggiori Informazioni</a>
     </div>
     <div class="card-footer">{{$article->created_at->diffForHumans()}}</div>
   </div>

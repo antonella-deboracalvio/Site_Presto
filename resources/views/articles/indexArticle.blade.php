@@ -19,7 +19,7 @@
     </div>
     <div>
         <div>
-            {{ $articles->links() }}
+            {{ $articles->links('pagination::bootstrap-5') }}
         </div>
     </div>
 </x-layout>
