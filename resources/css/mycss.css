@@ -118,7 +118,6 @@
 }
 
 .container-vetro {
-
     text-align: center;
     background-color: #306cac46;
     box-shadow: 0rem 0 1rem #000000c4;
@@ -148,6 +147,11 @@
 
 /* FINE WELCOME */
 
+/* INDEX */
+/* .btn-card-custom{
+
+} */
+/* FINE INDEX */
 
 
 
@@ -219,25 +223,39 @@
 /* paginator */
 
 .pagination-custom{
-    border-radius: 10%;
+    margin-left: 1rem !important;
+    border-radius: 20%;
     border: none;
-
+    background-color: transparent !important;
 }
 
-.pagination-custom:focus{
-    box-shadow: none !important;
+.pagination-custom:focus, .pagination-current-custom{
+    box-shadow: 0px 5px 10px rgb(62, 62, 62) !important;
+    border-radius: 20% !important;
+    background-color: var(--acc) !important;
+    
 }
 
 .container-pagination{
     background-color: var(--quar);
-    border-radius: 5%;
+    border-radius: 10px;
     align-items: center;
     
 }
 
-/* .pagination-custom{
-    background-color: var(--acc) !important;
-} */
+.pagination-current-custom{
+    margin-left: 1rem !important;
+    border: none !important;
+    box-shadow: 0px 5px 10px rgb(62, 62, 62) !important;
+}
+
+/* FINE PAGINATOR */
+
+/* FORM ARTICOLO */
+.select-custom:checked{
+    background-color: var(--quar) !important;
+}
+/* FINE FORM ARTICOLO */
 
 
 /* media query */

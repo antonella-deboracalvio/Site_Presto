@@ -7,7 +7,7 @@
         </div>
         <div class="row">
             @forelse ($articles as $article)
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-3 mt-3">
                 <x-card :article="$article" />
             </div>
         @empty
@@ -17,9 +17,11 @@
         @endforelse
         </div>
     </div>
-    <div>
-        <div>
-            {{ $articles->links('pagination::bootstrap-5') }}
+    <divc class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                {{ $articles->links('pagination::bootstrap-5') }}
+            </div>
         </div>
     </div>
 </x-layout>

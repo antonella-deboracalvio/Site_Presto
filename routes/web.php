@@ -10,12 +10,13 @@ Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
 //rotta per il form di creazione dell'articolo
 Route::get('/articles/create', [ArticleController::class, 'createArticle'])->name('createArticle'); 
 
-//rotta dell'index di tutti gli articoli inseriti
-Route::get('/articles/index', [ArticleController::class, 'indexArticle'])->name('indexArticle'); 
-
 //rotta per mostrare l'articolo selezionato
 Route::get('/articles/detail/{article}', [ArticleController::class, 'detailArticle'])->name('detailArticle');
 
+//rotta dell'index di tutti gli articoli inseriti
+Route::get('/articles/index', [ArticleController::class, 'indexArticle'])->name('indexArticle'); 
 
-Route::get('/category/{category}', [ArticleController::class, 'byCategory'])->name('byCategory');
+
+//rotta per mostrare le categorie
+Route::get('/category/{category}/detail', [ArticleController::class, 'byCategory'])->name('byCategory');
 
