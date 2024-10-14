@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 my-3">
                 <h1>Tutti gli articoli</h1>
             </div>
         </div>
@@ -17,9 +17,9 @@
         @endforelse
         </div>
     </div>
-    <divc class="container">
+    <div class="container">
         <div class="row">
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12 d-flex justify-content-center my-5">
                 {{ $articles->links('pagination::bootstrap-5') }}
             </div>
         </div>

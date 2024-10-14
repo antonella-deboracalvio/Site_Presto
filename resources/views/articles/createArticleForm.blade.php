@@ -1,10 +1,8 @@
 <x-layout>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">CREA ARTICOLO</div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-6">
+    <div class="container-fluid container-create-article">
+        
+        <div class="row justify-content-end">
+            <div class="col-12 col-md-6 m-md-5 p-5 row-create-article">
                 <livewire:create-article-form />
             </div>
         </div>
