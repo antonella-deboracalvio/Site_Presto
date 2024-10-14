@@ -1,7 +1,7 @@
 <div class="card">
     <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
       <img src="https://mdbootstrap.com/img/new/standard/nature/111.webp" class="img-fluid" />
-      <a href="#!">
+      <a href="{{route('byCategory', ['category'=>$article->category])}}">
         <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
       </a>
     </div>
