@@ -23,8 +23,9 @@ Route::get('/category/{category}/detail', [ArticleController::class, 'byCategory
 //rotta per filtro di ricerca testuale
 Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('searchArticles');
 
-Route::get('/revisor/index', [RevisorController::class, 'indexRevisor'])->name('indexRevisor');
+Route::get('/revisor/index', [RevisorController::class, 'indexRevisor'])->name('indexRevisor')->middleware('isRevisor');
 
 Route::patch('/accept/{article}', [RevisorController::class, 'acceptArticle'])->name('acceptArticle');
 
 Route::patch('/reject/{article}', [RevisorController::class, 'rejectArticle'])->name('rejectArticle');
+

@@ -43,7 +43,10 @@
                 
                 @if (Auth::user()->is_revisor)
                     <li class="nav-item">
-                        <a href="{{ route('indexRevisor') }}" class="nav-link text-white">Zona Revisore</a>
+                        <a href="{{ route('indexRevisor') }}" class="nav-link text-white position position-relative w-sm-25">Zona Revisore</a>
+                        <span class="position-absolute top-15 start-50 translate-middle badge rounded-pill bg-danger">
+                            {{\App\Models\Article::toBeRevisedCount()}}
+                        </span>
                     </li>
                 @endif
                 <button class="btn my-bg-quar btn-info-custom ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
