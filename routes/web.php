@@ -16,7 +16,8 @@ Route::get('/articles/detail/{article}', [ArticleController::class, 'detailArtic
 //rotta dell'index di tutti gli articoli inseriti
 Route::get('/articles/index', [ArticleController::class, 'indexArticle'])->name('indexArticle'); 
 
-
 //rotta per mostrare le categorie
 Route::get('/category/{category}/detail', [ArticleController::class, 'byCategory'])->name('byCategory');
 
+//rotta per filtro di ricerca testuale
+Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('searchArticles');

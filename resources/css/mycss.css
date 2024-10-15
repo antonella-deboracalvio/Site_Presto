@@ -89,6 +89,13 @@
 }
 
 /* WELCOME */
+.header-custom{
+    background-image: url(/public/storage/img/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+}
 
 .articles-home {
     background-image: linear-gradient(#141b41c2, #141b41c2), url("https://images.unsplash.com/photo-1588609460031-22705bc49db0?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
@@ -292,6 +299,15 @@
 @media screen and (max-width: 700px) {
     
     /* WELCOME */
+
+    .header-custom{
+        background-image: url(/public/storage/img/header-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 25vh;
+    }
+
     .articles-home {
         min-height: 20vh;
     }

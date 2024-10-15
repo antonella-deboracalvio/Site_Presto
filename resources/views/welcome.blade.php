@@ -1,7 +1,13 @@
 <x-layout>
+    <header class="container-fluid header-custom">
+        <div class="row">
+            <div class="col-12">
+            </div>
+        </div>
+    </header>
 
     <div class="wrapper container-fluid">
-        <h2 class="text-center m-5">Gli ultimi articoli</h2>
+        
         <div class="row justify-content-center">
             
             @forelse ($articles as $article)
