@@ -20,3 +20,5 @@ Route::get('/articles/index', [ArticleController::class, 'indexArticle'])->name(
 //rotta per mostrare le categorie
 Route::get('/category/{category}/detail', [ArticleController::class, 'byCategory'])->name('byCategory');
 
+
+Route::get('/revisor/index', [RevisorController::class, 'indexRevisor'])->name('indexRevisor');
