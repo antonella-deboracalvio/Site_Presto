@@ -42,6 +42,16 @@
                 <button class="btn my-bg-quar btn-info-custom ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     {{ Auth::user()->name }} <i class="fa-solid fa-user ms-1"></i>
                 </button>
+                
+                @if (Auth::user()->is_revisor)
+                    <li class="nav-item">
+                        <a href="{{ route('indexRevisor') }}" class="nav-link text-white">Zona Revisore</a>
+                    </li>
+                @endif
+
+                <button class="btn my-bg-quar btn-info-custom ms-auto" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">{{ Auth::user()->name }} <i
+                    class="fa-regular fa-user ms-1"></i></button>
             @else
                 <button class="btn my-bg-quar btn-info-custom ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <i class="fa-regular fa-user"></i>
