@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  <x-navbar />
+  <x-navbar/>
   {{ $slot }}
   <x-footer />
 
