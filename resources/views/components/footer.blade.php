@@ -1,37 +1,37 @@
 <!-- Footer -->
-<footer class="bg-body-tertiary text-center">
+<footer class="my-bg-ter text-center text-white">
     <!-- Grid container -->
     <div class="container p-4">
       <!-- Section: Social media -->
       <section class="mb-4">
         <!-- Facebook -->
         <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-facebook-f"></i
+          ><i class="fab fa-facebook-f text-white text-white"></i
         ></a>
   
         <!-- Twitter -->
         <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-twitter"></i
+          ><i class="fab fa-twitter text-white"></i
         ></a>
   
         <!-- Google -->
         <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-google"></i
+          ><i class="fab fa-google text-white"></i
         ></a>
   
         <!-- Instagram -->
         <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-instagram"></i
+          ><i class="fab fa-instagram text-white"></i
         ></a>
   
         <!-- Linkedin -->
         <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-linkedin-in"></i
+          ><i class="fab fa-linkedin-in text-white"></i
         ></a>
   
         <!-- Github -->
         <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-github"></i
+          ><i class="fab fa-github text-white"></i
         ></a>
 
       <!-- Section: Text -->
@@ -54,37 +54,16 @@
   
             <ul class="list-unstyled mb-0">
               <li>
-                <a class="text-body" href="#!">Link 1</a>
+                <a class="text-white text-decoration-none" href="#!">Link 1</a>
               </li>
               <li>
-                <a class="text-body" href="#!">Link 2</a>
+                <a class="text-white text-decoration-none" href="#!">Link 2</a>
               </li>
               <li>
-                <a class="text-body" href="#!">Link 3</a>
+                <a class="text-white text-decoration-none" href="#!">Link 3</a>
               </li>
               <li>
-                <a class="text-body" href="#!">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a class="text-body" href="#!">Link 1</a>
-              </li>
-              <li>
-                <a class="text-body" href="#!">Link 2</a>
-              </li>
-              <li>
-                <a class="text-body" href="#!">Link 3</a>
-              </li>
-              <li>
-                <a class="text-body" href="#!">Link 4</a>
+                <a class="text-white text-decoration-none" href="#!">Link 4</a>
               </li>
             </ul>
           </div>
@@ -96,16 +75,16 @@
   
             <ul class="list-unstyled mb-0">
               <li>
-                <a class="text-body" href="#!">Link 1</a>
+                <a class="text-white text-decoration-none" href="#!">Link 1</a>
               </li>
               <li>
-                <a class="text-body" href="#!">Link 2</a>
+                <a class="text-white text-decoration-none" href="#!">Link 2</a>
               </li>
               <li>
-                <a class="text-body" href="#!">Link 3</a>
+                <a class="text-white text-decoration-none" href="#!">Link 3</a>
               </li>
               <li>
-                <a class="text-body" href="#!">Link 4</a>
+                <a class="text-white text-decoration-none" href="#!">Link 4</a>
               </li>
             </ul>
           </div>
@@ -117,16 +96,37 @@
   
             <ul class="list-unstyled mb-0">
               <li>
-                <a class="text-body" href="#!">Link 1</a>
+                <a class="text-white text-decoration-none" href="#!">Link 1</a>
               </li>
               <li>
-                <a class="text-body" href="#!">Link 2</a>
+                <a class="text-white text-decoration-none" href="#!">Link 2</a>
               </li>
               <li>
-                <a class="text-body" href="#!">Link 3</a>
+                <a class="text-white text-decoration-none" href="#!">Link 3</a>
               </li>
               <li>
-                <a class="text-body" href="#!">Link 4</a>
+                <a class="text-white text-decoration-none" href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a class="text-white text-decoration-none" href="#!">Link 1</a>
+              </li>
+              <li>
+                <a class="text-white text-decoration-none" href="#!">Link 2</a>
+              </li>
+              <li>
+                <a class="text-white text-decoration-none" href="#!">Link 3</a>
+              </li>
+              <li>
+                <a class="text-white text-decoration-none" href="#!">Link 4</a>
               </li>
             </ul>
           </div>
@@ -139,7 +139,7 @@
     <!-- Grid container -->
   
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    <div class="text-center p-3 my-bg-sec text-white">
       © 2024 Copyright:
       <p>Calvio - Comerci - Fattori</p>
     </div>
