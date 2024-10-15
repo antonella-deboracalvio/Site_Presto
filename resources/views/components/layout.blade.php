@@ -46,12 +46,12 @@
       
                           <div class="mb-3 container-custom">
                             
-                            <input placeholder="Email" type="email" class="input-custom w-100" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                            <input placeholder="Email" type="email" class="input-custom w-100 py-2" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
                           </div>
 
                           <div class="mb-3 container-custom">
                             
-                            <input placeholder="Password" type="password" class="input-custom w-100" id="exampleInputPassword1" name="password">
+                            <input placeholder="Password" type="password" class="input-custom w-100 py-2" id="exampleInputPassword1" name="password">
                           </div>
                         
                           <button type="submit" class="btn btn-info-custom my-bg-quar">Accedi</button>
@@ -71,16 +71,16 @@
                       <form method="POST" action="{{ route('register') }}">
                           @csrf
                           <div class="mb-3 container-custom">
-                              <input placeholder="Nome" type="text" class="input-custom w-100" id="nome" name="name">
+                              <input placeholder="Nome" type="text" class="input-custom w-100 py-2" id="nome" name="name">
                           </div>
                           <div class="mb-3 container-custom">
-                              <input placeholder="Email" type="email" class="input-custom w-100" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                              <input placeholder="Email" type="email" class="input-custom w-100 py-2" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
                           </div>
                           <div class="mb-3 container-custom">
-                              <input placeholder="Password" type="password" class="input-custom w-100" id="exampleInputPassword1" name="password">
+                              <input placeholder="Password" type="password" class="input-custom w-100 py-2" id="exampleInputPassword1" name="password">
                           </div>
                           <div class="mb-3 container-custom">
-                              <input placeholder="Conferma Password" type="password" class="input-custom w-100" id="exampleInputPassword1" name="password_confirmation">
+                              <input placeholder="Conferma Password" type="password" class="input-custom w-100 py-2" id="exampleInputPassword1" name="password_confirmation">
                           </div>
                           
                           <button type="submit" class="btn btn-info-custom my-bg-quar">Registrati</button>
