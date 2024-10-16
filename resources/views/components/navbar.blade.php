@@ -18,7 +18,7 @@
                 {{ Auth::user()->name }} <i class="fa-solid fa-user ms-1"></i>
             </button>
         @else
-            <button class="btn my-bg-quar btn-info-custom ms-auto me-3 user-btn" type="button" data-bs-toggle="offcanvas"
+            <button id="login-btn" class="btn my-bg-quar btn-info-custom ms-auto me-3 user-btn" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <i class="fa-regular fa-user"></i>
             </button>
@@ -69,3 +69,12 @@
 
 
 </nav>
+
+<script>
+    let btnLogin = document.querySelector('#login-btn')
+   
+    btnLogin.addEventListener('click', () => {
+        localStorage.setItem('offcanvasOpen', true)
+    })
+
+</script>
