@@ -7,12 +7,21 @@
     </div>
     @endif
     <header class="container-fluid header-custom">
-        <div class="row h-100">
-            <div class="col-11 d-flex justify-content-end align-items-center wrapper-btn-info-header-custom">
-                <a class="my-text-main btn-info-header-custom text-decoration-none my-bg-quar rounded" href="{{ route('createArticle') }}">Inserisci un articolo</a>
+        <div class="row h-100 justify-content-between">
+            <div class="col-12 col-md-6 d-flex align-items-center text-white">
+                <h1 class="display-3 fw-bold ps-5">
+                    <span class="my-text-acc fw-bolder display-1">Presto! <br> </span>  Liberati di quelle vecchie scarpe!
+                </h1>
+            </div>
+            <div class="col-12 col-md-5 d-flex justify-content-center px-5 mb-3 mb-md-0 align-items-center wrapper-btn-info-header-custom">
+                <a class="my-text-main w-100 text-center btn-info-header-custom text-decoration-none my-bg-quar rounded py-3 fw-bold" href="{{ route('createArticle') }}">Inserisci un articolo!</a>
             </div>
         </div>
     </header>
+
+    <div class="testo-scorrevole h-auto my-bg-main py-md-5">
+        <span class="my-text-quar display-3 fw-bolder py-2">Non perderti le ultime occasioni, fai...<span class="my-text-acc"><span></span> Presto!</span> </span>
+    </div>
 
     <div class="wrapper container-fluid">
         
@@ -37,6 +46,7 @@
             @endforelse
         </div>
     </div>
+
 
 
 </x-layout>

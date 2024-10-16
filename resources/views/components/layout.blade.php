@@ -121,7 +121,7 @@
 
                             <form class="" action="{{ route('logout') }}" method="post">
                               @csrf 
-                              <button class="rounded-bottom py-2 bg-danger text-white border-0 w-100" type="submit"> Logout </button> 
+                              <button class="rounded-bottom py-2 bg-danger text-white border-0 w-100" type="submit"> Logout <i class="fa-solid fa-person-through-window ms-1"></i></button> 
                             </form>
 
                         </div>

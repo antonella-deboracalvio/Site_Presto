@@ -6,26 +6,26 @@
       <section class="mb-4">
         <!-- Facebook -->
         <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-facebook-f text-white text-white"></i
+          ><i class="fa-brands fa-facebook text-white text-white my-bg-main rounded-circle p-2 p-md-3"></i
         ></a>
-  
+
         <!-- Twitter -->
         <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-          ><i class="fa-brands fa-x-twitter text-white"></i></a>
+          ><i class="fa-brands fa-x-twitter text-white my-bg-main rounded-circle p-2 p-md-3"></i></a>
   
         <!-- Google -->
         <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-google text-white"></i
+          ><i class="fab fa-google text-white my-bg-main rounded-circle p-2 p-md-3"></i
         ></a>
   
         <!-- Instagram -->
         <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-instagram text-white"></i
+          ><i class="fab fa-instagram text-white my-bg-main rounded-circle p-2 p-md-3"></i
         ></a>
   
         <!-- Linkedin -->
         <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-linkedin-in text-white"></i
+          ><i class="fab fa-linkedin-in text-white my-bg-main rounded-circle p-2 p-md-3"></i
         ></a>
   
         <!-- Github -->
@@ -54,7 +54,7 @@
                 <p>Clicca qui sotto per inviare la tua richiesta</p>
               </li>
               <li>
-                <a class="text-white btn btn-success" href="{{route('becomeRevisor')}}">Diventa revisore</a>
+                <a class="my-text-main btn my-bg-quar btn-info-custom" href="{{route('becomeRevisor')}}">Diventa revisore</a>
               </li>
               
             </ul>
