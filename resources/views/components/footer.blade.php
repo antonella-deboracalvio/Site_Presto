@@ -50,21 +50,16 @@
         <div class="row">
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
+            <h5 class="text-uppercase">Vuoi diventare revisore?</h5>
   
             <ul class="list-unstyled mb-0">
               <li>
-                <a class="text-white text-decoration-none" href="#!">Link 1</a>
+                <p>Clicca qui sotto per inviare la tua richiesta</p>
               </li>
               <li>
-                <a class="text-white text-decoration-none" href="#!">Link 2</a>
+                <a class="text-white btn btn-success" href="{{route('becomeRevisor')}}">Diventa revisore</a>
               </li>
-              <li>
-                <a class="text-white text-decoration-none" href="#!">Link 3</a>
-              </li>
-              <li>
-                <a class="text-white text-decoration-none" href="#!">Link 4</a>
-              </li>
+              
             </ul>
           </div>
           <!--Grid column-->
