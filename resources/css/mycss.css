@@ -50,23 +50,23 @@
 
 /* colori dei bordi */
 .my-border-main {
-    border-color: var(--main);
+    border: 1px solid var(--main) !important;
 }
 
 .my-border-sec {
-    border-color: var(--sec);
+    border: 1px solid var(--sec) !important;
 }
 
 .my-border-ter {
-    border-color: var(--ter);
+    border: 1px solid var(--ter) !important;
 }
 
 .my-border-quar {
-    border-color: var(--quar);
+    border: 1px solid var(--quar) !important;
 }
 
 .my-border-acc {
-    border-color: var(--acc);
+    border: 1px solid var(--acc) !important;
 }
 
 /* Navbar */
@@ -247,6 +247,19 @@
 
 .btn-accordion-custom::after {
     display: none !important;
+    transition: 0.5s;
+}
+
+.btn-offcanvas-logged:hover{
+    background-color: var(--sec) !important;
+    transition: 0.5s;
+}
+
+.notifica-revisore-offcanvas{
+    position: absolute;
+    z-index: 100;
+    top: 148px;
+    right: 15px;
 }
 
 /* FINE OFFCANVAS */
