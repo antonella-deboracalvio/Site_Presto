@@ -7,18 +7,19 @@
     </div>
     @endif
     <header class="container-fluid header-custom">
-        <div class="row">
-            <div class="col-12">
+        <div class="row h-100">
+            <div class="col-11 d-flex justify-content-end align-items-center pe-5 me-5">
+                <a class="my-text-main btn-info-custom me-5 text-decoration-none my-bg-quar px-5 py-3 rounded display-3" href="{{ route('createArticle') }}">Inserisci un articolo</a>
             </div>
         </div>
     </header>
 
     <div class="wrapper container-fluid">
         
-        <div class="row justify-content-center">
+        <div class="row justify-content-evenly">
             
             @forelse ($articles as $article)
-                <a href="{{ route('detailArticle', compact('article')) }}" class=" col-11 articles-home mt-3 text-decoration-none align-content-center rounded-3" data-aos="fade-right">
+                <a href="{{ route('detailArticle', compact('article')) }}" class="col-md-5 mx-3 col-11 articles-home mt-md-5 text-decoration-none align-content-center rounded-3" data-aos="zoom-in-up">
                     <div class="row">
                         <div class="col-4 container-vetro align-content-center ms-5">
                             <h3 class="text-white">{{ $article->title }}</h3>

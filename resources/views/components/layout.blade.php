@@ -91,6 +91,11 @@
             </div>
 
             @else
+            @if (Auth::user()->is_revisor)
+                    <li class="nav-item">
+                        <a href="{{ route('indexRevisor') }}" class="nav-link text-white position position-relative w-sm-25">Zona Revisore</a>
+                    </li>
+                @endif
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                   <a class="nav-link text-white" href="{{ route('createArticle') }}">Inserisci un articolo</a>

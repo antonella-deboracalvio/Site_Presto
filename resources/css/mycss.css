@@ -88,9 +88,31 @@
     
 }
 
+.user-btn{
+    position: absolute;
+    top: 20px;
+    right: 13px;
+}
+
+.search-bar-nav{
+    min-width: 1000px !important;
+    margin-left: 350px;
+}
+
+.navbar-brand img{
+    width: 150px;
+}
+
+.notifica-revisore{
+    position: absolute;
+    z-index: 100;
+    top: 22px;
+    right: 10px;
+}
+
 /* WELCOME */
 .header-custom{
-    background-image: url(/public/storage/img/header-bg.jpg);
+    background-image: url(/public/storage/img/header-bg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -102,7 +124,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 50vh;
+    min-height: 30vh;
     margin-top: 1rem;
     transition: 0.5s !important;
     
@@ -297,11 +319,30 @@
 /* media query */
 
 @media screen and (max-width: 700px) {
+    /* NAVBAR */
+    .search-bar-nav{
+        min-width: 85% !important;
+        margin-left: 0px;
+    }
+
+    .user-btn{
+        position: absolute;
+        top: 20px;
+        right: 80px;
+    }
+
+    .notifica-revisore{
+        position: absolute;
+        z-index: 100;
+        top: 22px;
+        right: 75px;
+    }
+    /* FINE NAVBAR */
     
     /* WELCOME */
 
     .header-custom{
-        background-image: url(/public/storage/img/header-bg.jpg);
+        background-image: url(/public/storage/img/header-bg.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;

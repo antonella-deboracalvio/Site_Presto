@@ -1,6 +1,30 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top py-3">
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top p-0">
     <div class="container-fluid">
-        <a class="navbar-brand text-white" href="{{ route('welcome') }}">Presto.it</a>
+        <a class="navbar-brand text-white" href="{{ route('welcome') }}"><img src="/storage/img/logotipo.png"
+                alt="logotipo"></a>
+        @auth
+
+            @if (Auth::user()->is_revisor)
+                <li class="nav-item list-unstyled">
+                    @if (\App\Models\Article::toBeRevisedCount() > 0)
+                        <span class="notifica-revisore translate-middle badge rounded-pill bg-danger">
+                            {{ \App\Models\Article::toBeRevisedCount() }}
+                        </span>
+                    @endif
+                </li>
+            @endif
+            <button class="btn my-bg-quar btn-info-custom ms-auto me-3 user-btn" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                {{ Auth::user()->name }} <i class="fa-solid fa-user ms-1"></i>
+            </button>
+        @else
+            <button class="btn my-bg-quar btn-info-custom ms-auto me-3 user-btn" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <i class="fa-regular fa-user"></i>
+            </button>
+
+        @endauth
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,33 +55,17 @@
                 </li>
 
                 <li>
-                    <form class="d-flex" role="search" method="GET" action="{{ route('searchArticles') }}">
-                        <input class="form-control input-custom me-2" type="search" name="query" placeholder="Search" aria-label="Search">
-                        <button class="btn my-bg-quar btn-info-custom" type="submit" id="basic-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <form class="d-flex justify-content-center form-search-nav py-3 py-md-0" role="search" method="GET"
+                        action="{{ route('searchArticles') }}">
+                        <input class="form-control input-custom me-2 search-bar-nav" type="search" name="query"
+                            placeholder="Search" aria-label="Search">
+                        <button class="btn my-bg-quar btn-info-custom" type="submit" id="basic-addon2"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </li>
             </ul>
-            @auth
-
-              
-                
-                @if (Auth::user()->is_revisor)
-                    <li class="nav-item">
-                        <a href="{{ route('indexRevisor') }}" class="nav-link text-white position position-relative w-sm-25">Zona Revisore</a>
-                        <span class="position-absolute top-15 start-50 translate-middle badge rounded-pill bg-danger">
-                            {{\App\Models\Article::toBeRevisedCount()}}
-                        </span>
-                    </li>
-                @endif
-                <button class="btn my-bg-quar btn-info-custom ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                    {{ Auth::user()->name }} <i class="fa-solid fa-user ms-1"></i>
-                </button>
-            @else
-                <button class="btn my-bg-quar btn-info-custom ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                    <i class="fa-regular fa-user"></i>
-                </button>
-
-            @endauth
         </div>
     </div>
+
+
 </nav>
