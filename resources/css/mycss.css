@@ -95,8 +95,8 @@
 }
 
 .search-bar-nav{
-    min-width: 1000px !important;
-    margin-left: 350px;
+    min-width: 200% !important;
+    margin-left: 300%;
 }
 
 .navbar-brand img{
@@ -173,6 +173,27 @@
     box-shadow: 0px 5px 10px var(--main);
     transition: 0.5s;
 }
+
+.wrapper-btn-info-header-custom{
+    margin-right: 4rem;
+    padding-right: 2rem;
+}
+
+.btn-info-header-custom{
+    transition: 0.5s;
+    padding: 4rem 2rem;
+    font-size: 3rem;
+    margin-right: 3rem;
+}
+
+.btn-info-header-custom:hover{
+    background-color: #e5d8ff !important;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 10px var(--main);
+    transition: 0.5s;
+}
+
+
 
 /* FINE WELCOME */
 
@@ -360,6 +381,18 @@
         background-position: center;
         background-size: cover;
         height: 25vh;
+    }
+
+    .wrapper-btn-info-header-custom{
+        margin-right: 0rem;
+        padding-right: 0rem;
+    }
+
+    .btn-info-header-custom{
+        transition: 0.5s;
+        font-size: 1rem;
+        padding: 0.5rem;
+        margin-right: 0rem;
     }
 
     .articles-home {

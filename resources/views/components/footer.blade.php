@@ -11,8 +11,7 @@
   
         <!-- Twitter -->
         <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-twitter text-white"></i
-        ></a>
+          ><i class="fa-brands fa-x-twitter text-white"></i></a>
   
         <!-- Google -->
         <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
@@ -30,9 +29,7 @@
         ></a>
   
         <!-- Github -->
-        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-github text-white"></i
-        ></a>
+        
 
       <!-- Section: Text -->
       <section class="mb-4">
@@ -47,9 +44,9 @@
       <!-- Section: Links -->
       <section class="">
         <!--Grid row-->
-        <div class="row">
+        <div class="row justify-content-around">
           <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="col-12 col-md-3 mb-5 mb-md-0">
             <h5 class="text-uppercase">Vuoi diventare revisore?</h5>
   
             <ul class="list-unstyled mb-0">
@@ -65,7 +62,7 @@
           <!--Grid column-->
   
           <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
             <h5 class="text-uppercase">Links</h5>
   
             <ul class="list-unstyled mb-0">
@@ -86,7 +83,7 @@
           <!--Grid column-->
   
           <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
             <h5 class="text-uppercase">Links</h5>
   
             <ul class="list-unstyled mb-0">
@@ -104,27 +101,9 @@
               </li>
             </ul>
           </div>
-          <!--Grid column-->
+          
   
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a class="text-white text-decoration-none" href="#!">Link 1</a>
-              </li>
-              <li>
-                <a class="text-white text-decoration-none" href="#!">Link 2</a>
-              </li>
-              <li>
-                <a class="text-white text-decoration-none" href="#!">Link 3</a>
-              </li>
-              <li>
-                <a class="text-white text-decoration-none" href="#!">Link 4</a>
-              </li>
-            </ul>
-          </div>
+          
           <!--Grid column-->
         </div>
         <!--Grid row-->
