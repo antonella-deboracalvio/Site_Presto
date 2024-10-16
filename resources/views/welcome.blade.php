@@ -8,8 +8,8 @@
     @endif
     <header class="container-fluid header-custom">
         <div class="row h-100">
-            <div class="col-11 d-flex justify-content-end align-items-center pe-5 me-5">
-                <a class="my-text-main btn-info-custom me-5 text-decoration-none my-bg-quar px-5 py-3 rounded display-3" href="{{ route('createArticle') }}">Inserisci un articolo</a>
+            <div class="col-11 d-flex justify-content-end align-items-center wrapper-btn-info-header-custom">
+                <a class="my-text-main btn-info-header-custom text-decoration-none my-bg-quar rounded" href="{{ route('createArticle') }}">Inserisci un articolo</a>
             </div>
         </div>
     </header>
