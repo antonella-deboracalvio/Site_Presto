@@ -1,13 +1,13 @@
 <x-layout>
     <div class="container">
         <div class="row">
-            <div class="col-12 my-3">
-                <h1>Risultati per la ricerca: <span>{{ $query }}</span></h1>
+            <div class="col-12 my-3 text-center">
+                <h1 class="my-text-main fw-bold text-center display-2">Risultati per la ricerca: <span class="my-text-acc">{{ $query }}</span></h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-evenly">
             @forelse ($articles as $article)
-            <div class="col-12 col-md-4 mt-3">
+            <div class="col-6 col-md-4 mt-4">
                 <x-card :article="$article" />
             </div>
         @empty
@@ -17,11 +17,12 @@
         @endforelse
         </div>
     </div>
-    <div class="container">
+    {{-- <div class="container">
         <div class="row">
             <div class="col-12 d-flex justify-content-center my-5">
                 {{ $articles->links('pagination::bootstrap-5') }}
             </div>
         </div>
-    </div>
+    </div> --}}
 </x-layout>
+

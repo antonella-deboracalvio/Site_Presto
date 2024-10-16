@@ -90,6 +90,7 @@
                         <div class="mb-3 container-custom">
                             <input placeholder="Nome" type="text" class="input-custom w-100 py-2"
                             id="nome" name="name">
+         
                         </div>
                         <div class="mb-3 container-custom">
                             <input placeholder="Email" type="email" class="input-custom w-100 py-2"
@@ -112,31 +113,30 @@
         </div>
     </div>
     @else
-    <div class="container">
-        <div class="row">
-            <div class="col-12 border rounded p-0">
-                <div class="w-100">
-                    <a class="nav-link text-white text-center border-bottom py-3 my-bg-main btn-offcanvas-logged rounded-top" href="{{ route('createArticle') }}">Inserisci un articolo</a>
-                    
-                    @if (Auth::user()->is_revisor)
-                    @if (\App\Models\Article::toBeRevisedCount() > 0)
-                    <span class="notifica-revisore-offcanvas translate-middle badge rounded-pill bg-danger">
-                        {{ \App\Models\Article::toBeRevisedCount() }}
-                    </span>
-                    @endif
-                    <a href="{{ route('indexRevisor') }}" class="nav-link text-white my-bg-main position position-relative w-sm-25 text-center py-3 border-bottom btn-offcanvas-logged">Zona Revisore</a>
-                    @endif
-                    
-                </div>
-                
-                <form class="" action="{{ route('logout') }}" method="post">
-                    @csrf 
-                    <button class="rounded-bottom py-2 bg-danger text-white border-0 w-100" type="submit"> Logout </button> 
-                </form>
-                
-            </div>
-        </div>
-    </div>
+
+   <div class="container">
+                    <div class="row">
+                        <div class="col-12 border rounded p-0">
+                          <div class="w-100">
+                            <a class="nav-link text-white text-center border-bottom py-3 my-bg-main btn-offcanvas-logged rounded-top" href="{{ route('createArticle') }}">Inserisci un articolo</a>
+
+                            @if (Auth::user()->is_revisor)
+                              @if (\App\Models\Article::toBeRevisedCount() > 0)
+                                <span class="notifica-revisore-offcanvas translate-middle badge rounded-pill bg-danger">
+                                  {{ \App\Models\Article::toBeRevisedCount() }}
+                                </span>
+                              @endif
+                                <a href="{{ route('indexRevisor') }}" class="nav-link text-white my-bg-main position position-relative w-sm-25 text-center py-3 border-bottom btn-offcanvas-logged">Zona Revisore</a>
+                            @endif
+
+                          </div>
+
+                            <form class="" action="{{ route('logout') }}" method="post">
+                              @csrf 
+                              <button class="rounded-bottom py-2 bg-danger text-white border-0 w-100" type="submit"> Logout <i class="fa-solid fa-person-through-window ms-1"></i></button> 
+                            </form>
+
+                        </div>
     
     @endguest
     
