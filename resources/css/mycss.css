@@ -69,6 +69,9 @@
     border: 1px solid var(--acc) !important;
 }
 
+main{
+    min-height: 70vh;
+}
 /* Navbar */
 
 .navbar {
@@ -86,6 +89,15 @@
         0px 18px 80px rgba(0, 0, 0, 0.12);
 
 
+}
+
+.categorie-navbar:hover{
+    background-color: var(--quar) !important;
+    color: var(--main) !important;
+}
+
+.link-navbar:hover {
+    color: var(--quar) !important;
 }
 
 .user-btn {

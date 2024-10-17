@@ -10,7 +10,7 @@
         <div class="row h-100 justify-content-between">
             <div class="col-12 col-md-6 d-flex align-items-center text-white">
                 <h1 class="display-3 fw-bold ps-5">
-                    <span class="my-text-acc fw-bolder display-1">Presto! <br> </span>  Liberati di quelle vecchie scarpe!
+                    <span class="my-text-acc fw-bolder display-1">Presto! <br> </span>  {{$frase}}
                 </h1>
             </div>
             <div class="col-12 col-md-5 d-flex justify-content-center px-5 mb-3 mb-md-0 align-items-center wrapper-btn-info-header-custom">

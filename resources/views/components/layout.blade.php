@@ -19,7 +19,9 @@
 
 <body>
     <x-navbar />
-    {{ $slot }}
+    <main class="">
+        {{ $slot }}
+    </main>
     <x-footer />
     
     
@@ -90,7 +92,6 @@
                         <div class="mb-3 container-custom">
                             <input placeholder="Nome" type="text" class="input-custom w-100 py-2"
                             id="nome" name="name">
-         
                         </div>
                         <div class="mb-3 container-custom">
                             <input placeholder="Email" type="email" class="input-custom w-100 py-2"

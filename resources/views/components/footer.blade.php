@@ -46,19 +46,22 @@
         <!--Grid row-->
         <div class="row justify-content-around">
           <!--Grid column-->
-          <div class="col-12 col-md-3 mb-5 mb-md-0">
-            <h5 class="text-uppercase">Vuoi diventare revisore?</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <p>Clicca qui sotto per inviare la tua richiesta</p>
-              </li>
-              <li>
-                <a class="my-text-main btn my-bg-quar btn-info-custom" href="{{route('becomeRevisor')}}">Diventa revisore</a>
-              </li>
-              
-            </ul>
-          </div>
+          @auth
+            @if(!auth()->user()->is_revisor)
+            <div class="col-12 col-md-3 mb-5 mb-md-0">
+              <h5 class="text-uppercase">Vuoi diventare revisore?</h5>
+    
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <p>Clicca qui sotto per inviare la tua richiesta</p>
+                </li>
+                <li>
+                    <a class ="my-text-main btn my-bg-quar btn-info-custom" href="{{route('becomeRevisor')}}">Diventa revisore</a>
+                </li>
+              </ul>
+            </div>
+            @endif
+          @endauth
           <!--Grid column-->
   
           <!--Grid column-->

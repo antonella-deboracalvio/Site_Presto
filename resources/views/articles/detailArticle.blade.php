@@ -1,8 +1,9 @@
 <x-layout>
-    <div class="container mt-5 mb-5">
+
+    <div class="container mt-5">
         <div class="row d-flex justify-content-center">
             
-            <div class="col-6 ">
+            <div class="col-12 col-md-6">
                 <div id="carouselExampleIndicators" class="carousel slide ">
                     <div class="carousel-indicators">
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -30,24 +31,20 @@
                     </button>
                   </div>
             </div>
-            <div class="col-6  d-flex flex-column justify-content-center">
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
                 <h1>{{ $article->title }}</h1>
 
-                <a class="btn my-bg-quar btn-info-custom w-25 mb-5"
+                <a class="btn my-bg-quar btn-info-custom w-50 mb-5"
                 href="{{ route('byCategory', ['category' => $article->category]) }}">{{ $article->category->name }} <i class="fa-solid fa-circle-right ms-1"></i></a>
                 <h2>€{{ $article->price }} </h2>
                 <p>Inserzionista: {{ $article->user->name }}</p>
                 <p>Data di creazione: {{ $article->created_at->format('d/m/Y') }}</p>
-                <a class="btn my-bg-quar btn-info-custom w-25 mb-5" href="#" > Contatta <i class="fa-solid fa-message ms-1"></i></a>
+                <a class="btn my-bg-quar btn-info-custom w-50 mb-5" href="#" > Contatta <i class="fa-solid fa-message ms-1"></i></a>
             </div>
             <div class="col-12 mt-3">
                 <p>Descrizione: {{ $article->description }}</p>
             </div>
         </div>
     </div>
-    
-    
-    
-    
-    
+
 </x-layout>

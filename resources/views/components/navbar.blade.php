@@ -32,19 +32,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{ route('indexArticle') }}">Tutti gli articoli</a>
+                    <a class="nav-link text-white link-navbar" href="{{ route('indexArticle') }}">Tutti gli articoli</a>
                 </li>
 
 
                 <li class="nav-item dropdown list-unstyled">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                    <a class="nav-link dropdown-toggle text-white link-navbar" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
 
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
-                            <li> <a class="dropdown-item"
+                            <li> <a class="dropdown-item categorie-navbar"
                                     href="{{ route('byCategory', ['category' => $category]) }}">{{ $category->name }}</a>
                             </li>
                             @if (!$loop->last)
@@ -58,7 +58,7 @@
                     <form class="d-flex justify-content-center form-search-nav py-3 py-md-0" role="search" method="GET"
                         action="{{ route('searchArticles') }}">
                         <input class="form-control input-custom me-2 search-bar-nav" type="search" name="query"
-                            placeholder="Search" aria-label="Search">
+                            placeholder="Cerca" aria-label="Search">
                         <button class="btn my-bg-quar btn-info-custom" type="submit" id="basic-addon2"><i
                                 class="fa-solid fa-magnifying-glass"></i></button>
                     </form>

@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-12 my-3 text-center">
-                <h1 class="my-text-main fw-bold text-center display-2">Risultati per la ricerca: <span class="my-text-acc">{{ $query }}</span></h1>
+                <h1 class="my-text-main fw-bold text-center display-3">Risultati per la ricerca: <span class="my-text-acc">{{ $query }}</span></h1>
             </div>
         </div>
         <div class="row justify-content-evenly">
@@ -10,12 +10,14 @@
             <div class="col-6 col-md-4 mt-4">
                 <x-card :article="$article" />
             </div>
+        </div>
         @empty
-            <div class="col-12">
-                <h3 class="text-center">Non ci sono articoli</h3>
+            <div class="row d-flex align-content-center">
+                <div class="col-12">
+                    <h3 class="text-center display-2">Non ci sono articoli per la tua ricerca</h3>
+                </div>
             </div>
         @endforelse
-        </div>
     </div>
     {{-- <div class="container">
         <div class="row">
