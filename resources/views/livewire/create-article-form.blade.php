@@ -1,12 +1,12 @@
 <div>
     @if (session()->has('message'))
-        <div class="alert alert-success text-center">
-            {{ session('message') }}
-        </div>
+    <div class="alert alert-success text-center">
+        {{ session('message') }}
+    </div>
     @endif
-
+    
     <form wire:submit='save'>
-
+        
         <div class="row ">
             {{-- inserisci --}}
             <div class="col-12 justify-content-center mb-5">
@@ -16,52 +16,84 @@
             <div class="col-12 col-md-6">
                 <div class="mb-3 container-custom">
                     <input type="text" placeholder="Titolo" class="form-control input-custom w-100 py-2" id="title"
-                        wire:model.blur="title">
+                    wire:model.blur="title">
                     @error('title')
-                        <p class="text-danger">{{ $message }}</p>
+                    <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="mb-3 container-custom">
                     <input type="text" class="form-control input-custom w-100 py-2" placeholder="Prezzo"
-                        id="price" wire:model.blur="price">
+                    id="price" wire:model.blur="price">
                     @error('price')
-                        <p class="text-danger">{{ $message }}</p>
+                    <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="mb-3 container-custom">
                     <select class="form-select my-bg-sec text-white" id="category" wire:model="category">
                         <option class="my-bg-ter text-white select-custom" label disabled>Seleziona una categoria
                         </option>
-
+                        
                         @foreach ($categories as $category)
-                            <option class="my-bg-ter text-white select-custom" value="{{ $category->id }}">
-                                {{ $category->name }}</option>
-                        @endforeach
-
-                    </select>
-                    @error('category')
+                        <option class="my-bg-ter text-white select-custom" value="{{ $category->id }}">
+                            {{ $category->name }}</option>
+                            @endforeach
+                            
+                        </select>
+                        @error('category')
                         <p class="text-danger">{{ $message }}</p>
-                    @enderror
+                        @enderror
+                    </div>
                 </div>
-            </div>
-
-
-            {{-- descrizione --}}
-            <div class="col-12 col-md-6">
-                <div class="mb-3 container-custom">
-                    <textarea class="form-control input-custom w-100" placeholder="Descrizione" cols="30" rows="10"
+                
+                {{-- immagine --}}
+                
+                <div class="col-12 col-md-6">
+                    <div class="mb-3 container-custom">
+                        <input type="file" class="form-control input-custom w-100" id="image" wire:model.live="temporary_images" multiple>
+                        @error('temporary_images.*')
+                        <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                        @error('temporary_images')
+                        <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+                </div>
+                @if (count($images) > 0)
+            
+                <div class="col-12 col-md-6">
+                    <div class="mb-3 container-custom">
+                        <p>Photo preview</p>
+                        <div class="row">
+                            @foreach ($images as $key=> $image)
+                            <div class="col-12">
+                                <div class="img-preview" style="background-image: url({{ $image->temporaryUrl() }});">
+                                    
+                                </div>
+                                <button type="button" class="btn btn-danger" wire:click="removeImage({{ $key }})">X</button>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endif
+                
+                
+                {{-- descrizione --}}
+                <div class="col-12 col-md-6">
+                    <div class="mb-3 container-custom">
+                        <textarea class="form-control input-custom w-100" placeholder="Descrizione" cols="30" rows="10"
                         id="description" wire:model.blur="description"></textarea>
-                    @error('description')
+                        @error('description')
                         <p class="text-danger">{{ $message }}</p>
-                    @enderror
+                        @enderror
+                    </div>
+                </div>
+                {{-- crea --}}
+                <div class="col-12 d-flex justify-content-center mt-5">
+                    <button type="submit" class="btn btn-info-custom my-bg-quar">Crea</button>
                 </div>
             </div>
-            {{-- crea --}}
-            <div class="col-12 d-flex justify-content-center mt-5">
-                <button type="submit" class="btn btn-info-custom my-bg-quar">Crea</button>
-            </div>
-        </div>
-
-    </form>
-
-</div>
+            
+        </form>
+        
+    </div>
