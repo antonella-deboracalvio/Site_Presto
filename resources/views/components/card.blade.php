@@ -1,7 +1,7 @@
 <a href="{{route('detailArticle', compact('article'))}}" class="text-decoration-none">
   <div class="card card-custom">
       <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-        <img src="{{$article->images->isNotEmpty() ? Storage::url($article->images->first()->path) : 'https://mdbootstrap.com/img/new/standard/nature/111.webp'}}" class="img-fluid rounded-1 card-img-top" alt="Immagine dell'articolo {{$article->title}}"/>
+        <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://mdbootstrap.com/img/new/standard/nature/111.webp'}}" class="img-fluid rounded-1 card-img-top" alt="Immagine dell'articolo {{$article->title}}"/>
       </div>
       <h6 class="card-header text-decoration-none border ">{{$article->category->name}}</h6>
       <div class="card-body pb-1">
