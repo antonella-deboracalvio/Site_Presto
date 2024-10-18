@@ -22,7 +22,6 @@
     <div class="testo-scorrevole h-auto my-bg-main py-md-5">
         <span class="my-text-quar display-3 fw-bolder py-2">Non perderti le ultime occasioni, fai...<span class="my-text-acc"><span></span> Presto!</span> </span>
     </div>
-
     <div class="wrapper container-fluid">
         
         <div class="row justify-content-evenly">

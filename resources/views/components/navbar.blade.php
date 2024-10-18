@@ -2,6 +2,8 @@
     <div class="container-fluid">
         <a class="navbar-brand text-white" href="{{ route('welcome') }}"><img src="/storage/img/logotipo.png"
                 alt="logotipo"></a>
+
+              
         @auth
 
             @if (Auth::user()->is_revisor)
@@ -13,6 +15,7 @@
                     @endif
                 </li>
             @endif
+            
             <button class="btn my-bg-quar btn-info-custom ms-auto me-3 user-btn" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 {{ Auth::user()->name }} <i class="fa-solid fa-user ms-1"></i>
@@ -24,7 +27,9 @@
             </button>
 
         @endauth
-
+        <x-_locale lang='it' />
+        <x-_locale lang='en' />
+        <x-_locale lang='de' />
         <button class="navbar-toggler py-2 btn-info-custom my-bg-quar btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-compass fs-5"></i>
@@ -32,6 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
+                                                                        {{-- prova traduzione --}}
                     <a class="nav-link text-white link-navbar" href="{{ route('indexArticle') }}">Tutti gli articoli</a>
                 </li>
 
@@ -45,7 +51,7 @@
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
                             <li> <a class="dropdown-item categorie-navbar"
-                                    href="{{ route('byCategory', ['category' => $category]) }}">{{ $category->name }}</a>
+                                    href="{{ route('byCategory', ['category' => $category]) }}">{{__("us.{$category->name}")}}</a>
                             </li>
                             @if (!$loop->last)
                                 <hr class="dropdown-divider">
@@ -53,6 +59,7 @@
                         @endforeach
                     </ul>
                 </li>
+
 
                 <li>
                     <form class="d-flex justify-content-center form-search-nav py-3 py-md-0" role="search" method="GET"
@@ -65,8 +72,9 @@
                 </li>
             </ul>
         </div>
+    
     </div>
-
+     
 
 </nav>
 

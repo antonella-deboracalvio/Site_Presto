@@ -38,3 +38,6 @@ Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->nam
 // rotta per far diventare revisore
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('makeRevisor');
 
+
+Route::post('/lingua{lang}', [PublicController::class, 'setLanguage'])->name('setLanguage');
+
