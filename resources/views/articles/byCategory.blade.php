@@ -2,7 +2,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-12 my-3">
-                <h1 class="my-text-main fw-bold text-center display-3">{{$category->name}}</h1>
+                <h1 class="my-text-main fw-bold text-center display-3">{{__("ui.$category->name")}}</h1>
             </div>
         </div>
         <div class="row justify-content-evenly">
@@ -12,7 +12,7 @@
                 </div>
             @empty
                 <div class="col-12">
-                    <h3 class="text-center display-2">Non ci sono articoli in questa categoria</h3>
+                    <h3 class="text-center display-2">{{__("ui.no article in this category")}}</h3>
                 </div>
             @endforelse
         </div>

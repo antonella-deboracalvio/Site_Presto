@@ -9,7 +9,7 @@ class PublicController extends Controller
 {
     public function welcome()
     {
-        $frasi = ['Vendi il maglione della nonna', 'Liberati di quelle vecchie scarpe', 'Liberati di quel soprammobile', 'Sbarazzati di quel vecchio peluche', 'Vendi quel vecchio servizio di pentole'];
+        $frasi = ["ui.vendi il maglione della nonna", "ui.liberati di quelle vecchie scarpe", "ui.liberati di quel soprammobile", "ui.sbarazzati di quel vecchio peluche", "ui.vendi quel vecchio servizio di pentole"];
         $fraseScelta = $frasi[array_rand($frasi)];
         $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(6)->get();
         return view('welcome' , compact('articles'), ['frase' => $fraseScelta]);

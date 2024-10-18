@@ -10,17 +10,17 @@
         <div class="row h-100 justify-content-between">
             <div class="col-12 col-md-6 d-flex align-items-center text-white">
                 <h1 class="display-3 fw-bold ps-5">
-                    <span class="my-text-acc fw-bolder display-1">Presto! <br> </span>  {{$frase}}
+                    <span class="my-text-acc fw-bolder display-1">{{__("ui.presto")}}! <br> </span>  {{__($frase)}}
                 </h1>
             </div>
             <div class="col-12 col-md-5 d-flex justify-content-center px-5 mb-3 mb-md-0 align-items-center wrapper-btn-info-header-custom">
-                <a class="my-text-main w-100 text-center btn-info-header-custom text-decoration-none my-bg-quar rounded py-3 fw-bold" href="{{ route('createArticle') }}">Inserisci un articolo!</a>
+                <a class="my-text-main w-100 text-center btn-info-header-custom text-decoration-none my-bg-quar rounded py-3 fw-bold" href="{{ route('createArticle') }}">{{__("ui.insert an article")}}!</a>
             </div>
         </div>
     </header>
 
     <div class="testo-scorrevole h-auto my-bg-main py-md-5">
-        <span class="my-text-quar display-3 fw-bolder py-2">Non perderti le ultime occasioni, fai...<span class="my-text-acc"><span></span> Presto!</span> </span>
+        <span class="my-text-quar display-3 fw-bolder py-2">{{__("ui.non perderti le ultime occasioni fai")}}...<span class="my-text-acc"><span></span> {{__("ui.presto")}}!</span> </span>
     </div>
     <div class="wrapper container-fluid">
         
@@ -34,13 +34,14 @@
                         </div>
                         <div class="col-4 align-content-center ms-auto me-5 preview-last-articles">
                             <h3 class="text-white">€{{ $article->price }}</h3>
+                            {{-- ! non sono riuscito a tradurre la categoria nel foreach, per qualche motivo se scrivo {{__('ui.$article->category->name')}} mi conta il ->name come stringa. se uso i doppi apici mi conta tutto come stringa --}}
                             <h3 class="text-white">{{ $article->category->name }}</h3>
                         </div>
                     </div>
                 </a>
             @empty
                 <div class="col-12">
-                    <h3 class="text-center">Non ci sono articoli</h3>
+                    <h3 class="text-center"> {{__("ui.no articles")}}</h3>
                 </div>
             @endforelse
         </div>

@@ -46,13 +46,13 @@
                     href="{{ route('byCategory', ['category' => $article->category]) }}">{{ $article->category->name }}
                     <i class="fa-solid fa-circle-right ms-1"></i></a>
                 <h2>€{{ $article->price }} </h2>
-                <p>Inserzionista: {{ $article->user->name }}</p>
-                <p>Data di creazione: {{ $article->created_at->format('d/m/Y') }}</p>
-                <a class="btn my-bg-quar btn-info-custom w-50 mb-5" href="#"> Contatta <i
+                <p>{{__("ui.advertiser")}}: {{ $article->user->name }}</p>
+                <p>{{__("ui.data di creazione")}}: {{ $article->created_at->format('d/m/Y') }}</p>
+                <a class="btn my-bg-quar btn-info-custom w-50 mb-5" href="#">{{__("ui.contact")}}<i
                         class="fa-solid fa-message ms-1"></i></a>
             </div>
             <div class="col-12 mt-3">
-                <p>Descrizione: {{ $article->description }}</p>
+                <p>{{__("ui.description")}}: {{ $article->description }}</p>
             </div>
         </div>
     </div>

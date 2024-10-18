@@ -1,0 +1,62 @@
+<?php
+return
+[
+
+    // generali
+    'insert an article' => 'Inserisci un articolo', 
+    'insert your article' => 'Inserisci il tuo articolo',
+    'select a category' => 'Seleziona una categoria',
+    'image preview' => 'Anteprima immagine',
+    'all articles' => 'Tutti gli articoli',
+    'categories' => ' Categorie',
+    'category' => 'Categoria',
+    'search' => 'Cerca',
+    'no article' => 'Non ci sono articoli',
+    'no article in this category' => 'Non ci sono articoli in questa categoria',
+    'search results' => 'Risultati per la ricerca',
+    "there are no articles for your search" => "Non ci sono articoli per la tua ricerca.",
+    'login' => 'Accedi',
+    'register' => 'Registrati',
+    'logout' => 'Logout',
+    'revisor zone' => 'Zona revisore',
+    'title' => 'Titolo',
+    'description' => 'Descrizione',
+    'price' => 'Prezzo',
+    'create' => 'Crea',
+    'choose file' => 'Scegli i file',
+    'become revisor' => 'Diventa revisore',
+    'approve' => 'Approva',
+    'reject' => 'Rifiuta',
+    'contact' => 'Contatta',
+    'advertiser' => 'Inserzionista',
+    'links' => 'links',
+    'data di creazione' => 'Data di creazione',
+    "articles under review" => "Articoli in revisione",
+    'no article to review' => 'Non ci sono articoli da revisionare',
+    "go back to the homepage" => "Torna alla home",
+
+    // categorie
+    'elettronica' => 'elettronica',
+    'abbigliamento' => 'abbigliamento',
+    'salute e bellezza' => 'salute e bellezza',
+    'casa e giardinaggio' => 'casa e giardinaggio',
+    'giocattoli' => 'giocattoli',
+    'sport' => 'sport',
+    'animali domestici' => 'animali domestici',
+    'libri e riviste' => 'libri e riviste',
+    'accessori' => 'accessori',
+    'motori' => 'motori',
+
+    // frasi
+    'vendi il maglione della nonna' => 'Vendi il maglione della nonna',
+    'liberati di quelle vecchie scarpe' => 'Liberati di quelle vecchie scarpe',
+    'liberati di quel soprammobile' => 'Liberati di quel soprammobile',
+    'sbarazzati di quel vecchio peluche' => 'Sbarazzati di quel vecchio peluche',
+    'vendi quel vecchio servizio di pentole' => 'Vendi quel vecchio servizio di pentole',
+    'non perderti le ultime occasioni fai' => 'Non perderti le ultime occasioni, fai',
+    
+    'presto' => 'Presto',
+    'vuoi diventare revisore?' => 'Vuoi diventare revisore?',
+    'clicca qui per inviare la tua richiesta' => 'Clicca qui sotto per inviare la tua richiesta',
+    'lorem ipsum' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum harum corrupti dicta, aliquam sequi voluptate quas.',
+];

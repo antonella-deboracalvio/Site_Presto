@@ -34,9 +34,7 @@
       <!-- Section: Text -->
       <section class="mb-4">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum
-          harum corrupti dicta, aliquam sequi voluptate quas.
+          {{__("ui.lorem ipsum")}}
         </p>
       </section>
       <!-- Section: Text -->
@@ -49,14 +47,14 @@
           @auth
             @if(!auth()->user()->is_revisor)
             <div class="col-12 col-md-3 mb-5 mb-md-0">
-              <h5 class="text-uppercase">Vuoi diventare revisore?</h5>
+              <h5 class="text-uppercase">{{__("ui.vuoi diventare revisore?")}}</h5>
     
               <ul class="list-unstyled mb-0">
                 <li>
-                  <p>Clicca qui sotto per inviare la tua richiesta</p>
+                  <p>{{__("ui.clicca qui per inviare la tua richiesta")}}</p>
                 </li>
                 <li>
-                    <a class ="my-text-main btn my-bg-quar btn-info-custom" href="{{route('becomeRevisor')}}">Diventa revisore</a>
+                    <a class ="my-text-main btn my-bg-quar btn-info-custom" href="{{route('becomeRevisor')}}">{{__("ui.become revisor")}}</a>
                 </li>
               </ul>
             </div>
@@ -66,7 +64,7 @@
   
           <!--Grid column-->
           <div class="col-6 col-md-3 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
+            <h5 class="text-uppercase">{{__("ui.links")}}</h5>
   
             <ul class="list-unstyled mb-0">
               <li>
@@ -87,7 +85,7 @@
   
           <!--Grid column-->
           <div class="col-6 col-md-3 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
+            <h5 class="text-uppercase">{{__("ui.links")}}</h5>
   
             <ul class="list-unstyled mb-0">
               <li>

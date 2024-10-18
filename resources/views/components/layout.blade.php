@@ -51,7 +51,7 @@
                         <button class="accordion-button my-bg-main text-white collapsed btn-accordion-custom"
                         type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                         aria-controls="collapseOne">
-                        Accedi
+                        {{__("ui.login")}}
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -71,7 +71,7 @@
                                 id="exampleInputPassword1" name="password">
                             </div>
                             
-                            <button type="submit" class="btn btn-info-custom my-bg-quar">Accedi</button>
+                            <button type="submit" class="btn btn-info-custom my-bg-quar">{{__("ui.login")}}</button>
                         </form>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                     <button class="accordion-button my-bg-main text-white collapsed btn-accordion-custom"
                     type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
                     aria-expanded="false" aria-controls="collapseThree">
-                    Registrati
+                    {{__("ui.register")}}
                 </button>
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -107,7 +107,7 @@
                             name="password_confirmation">
                         </div>
                         
-                        <button type="submit" class="btn btn-info-custom my-bg-quar">Registrati</button>
+                        <button type="submit" class="btn btn-info-custom my-bg-quar">{{__("ui.register")}}</button>
                     </form>
                 </div>
             </div>
@@ -119,7 +119,7 @@
                     <div class="row">
                         <div class="col-12 border rounded p-0">
                           <div class="w-100">
-                            <a class="nav-link text-white text-center border-bottom py-3 my-bg-main btn-offcanvas-logged rounded-top" href="{{ route('createArticle') }}">Inserisci un articolo</a>
+                            <a class="nav-link text-white text-center border-bottom py-3 my-bg-main btn-offcanvas-logged rounded-top" href="{{ route('createArticle') }}">{{__("ui.insert an article")}}</a>
 
                             @if (Auth::user()->is_revisor)
                               @if (\App\Models\Article::toBeRevisedCount() > 0)
@@ -127,14 +127,14 @@
                                   {{ \App\Models\Article::toBeRevisedCount() }}
                                 </span>
                               @endif
-                                <a href="{{ route('indexRevisor') }}" class="nav-link text-white my-bg-main position position-relative w-sm-25 text-center py-3 border-bottom btn-offcanvas-logged">Zona Revisore</a>
+                                <a href="{{ route('indexRevisor') }}" class="nav-link text-white my-bg-main position position-relative w-sm-25 text-center py-3 border-bottom btn-offcanvas-logged">{{__("ui.revisor zone")}}</a>
                             @endif
 
                           </div>
 
                             <form class="" action="{{ route('logout') }}" method="post">
                               @csrf 
-                              <button class="rounded-bottom py-2 bg-danger text-white border-0 w-100" type="submit"> Logout <i class="fa-solid fa-person-through-window ms-1"></i></button> 
+                              <button class="rounded-bottom py-2 bg-danger text-white border-0 w-100" type="submit">{{__("ui.logout")}}<i class="fa-solid fa-person-through-window ms-1"></i></button> 
                             </form>
 
                         </div>

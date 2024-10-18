@@ -30,6 +30,7 @@
         <x-_locale lang='it' />
         <x-_locale lang='en' />
         <x-_locale lang='de' />
+        <x-_locale lang='ja' />
         <button class="navbar-toggler py-2 btn-info-custom my-bg-quar btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-compass fs-5"></i>
@@ -38,20 +39,22 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                                                                         {{-- prova traduzione --}}
-                    <a class="nav-link text-white link-navbar" href="{{ route('indexArticle') }}">Tutti gli articoli</a>
+                    <a class="nav-link text-white link-navbar" href="{{ route('indexArticle') }}">
+                        {{__("ui.all articles")}}
+                    </a>
                 </li>
 
 
                 <li class="nav-item dropdown list-unstyled">
                     <a class="nav-link dropdown-toggle text-white link-navbar" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie
+                        {{__("ui.categories")}}
                     </a>
 
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
                             <li> <a class="dropdown-item categorie-navbar"
-                                    href="{{ route('byCategory', ['category' => $category]) }}">{{__("us.{$category->name}")}}</a>
+                                    href="{{ route('byCategory', ['category' => $category]) }}">{{__("ui.$category->name")}}</a>
                             </li>
                             @if (!$loop->last)
                                 <hr class="dropdown-divider">
@@ -65,7 +68,7 @@
                     <form class="d-flex justify-content-center form-search-nav py-3 py-md-0" role="search" method="GET"
                         action="{{ route('searchArticles') }}">
                         <input class="form-control input-custom me-2 search-bar-nav" type="search" name="query"
-                            placeholder="Cerca" aria-label="Search">
+                            placeholder="{{__("ui.search")}}" aria-label="Search">
                         <button class="btn my-bg-quar btn-info-custom" type="submit" id="basic-addon2"><i
                                 class="fa-solid fa-magnifying-glass"></i></button>
                     </form>

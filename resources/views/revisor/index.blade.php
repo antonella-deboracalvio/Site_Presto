@@ -12,7 +12,7 @@
             <div class="col-3">
                 <div>
                     <h1 class="display-2 text-center">
-                        Articoli in revisione
+                        {{__("ui.articles under review")}}
                     </h1>
                 </div>
 
@@ -52,13 +52,13 @@
                     href="{{ route('byCategory', ['category' => $article_to_check->category]) }}">{{ $article_to_check->category->name }}
                     <i class="fa-solid fa-circle-right ms-1"></i></a>
                 <h2>€{{ $article_to_check->price }} </h2>
-                <p>Inserzionista: {{ $article_to_check->user->name }}</p>
-                <p>Data di creazione: {{ $article_to_check->created_at->format('d/m/Y') }}</p>
-                <a class="btn my-bg-quar btn-info-custom w-25 mb-5" href="#"> Contatta <i
+                <p>{{__("ui.advertiser")}}: {{ $article_to_check->user->name }}</p>
+                <p>{{__("ui.data di creazione")}}: {{ $article_to_check->created_at->format('d/m/Y') }}</p>
+                <a class="btn my-bg-quar btn-info-custom w-25 mb-5" href="#">{{__("ui.contact")}}<i
                         class="fa-solid fa-message ms-1"></i></a>
             </div>
             <div class="col-12 mt-3">
-                <p>Descrizione: {{ $article_to_check->description }}</p>
+                <p>{{__("ui.description")}}: {{ $article_to_check->description }}</p>
             </div>
 
 
@@ -67,14 +67,14 @@
                     @csrf
                     @method('PATCH')
 
-                    <button type="submit" class="btn btn-danger">Rifiuta</button>
+                    <button type="submit" class="btn btn-danger">{{__("ui.reject")}}</button>
                 </form>
 
                 <form action="{{ route('acceptArticle', ['article' => $article_to_check]) }}" method="POST">
                     @csrf
                     @method('PATCH')
 
-                    <button type="submit" class="btn btn-success">Approva</button>
+                    <button type="submit" class="btn btn-success">{{__("ui.approve")}}</button>
                 </form>
             </div>
     </div>
@@ -82,8 +82,8 @@
 @else
     <div class="row">
         <div class="col-12">
-            <h1>Nessun articolo da revisionare</h1>
-            <a href="{{ route('welcome') }}" class="btn btn-primary">Torna alla home</a>
+            <h1>{{__("ui.no article to review")}}</h1>
+            <a href="{{ route('welcome') }}" class="btn btn-primary">{{__("ui.go back to the homepage")}}</a>
         </div>
     </div>
     @endif
