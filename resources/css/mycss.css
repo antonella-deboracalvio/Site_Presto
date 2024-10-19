@@ -87,8 +87,13 @@ main{
         0px 7.4px 26.8px rgba(0, 0, 0, 0.068),
         0px 11.5px 42.7px rgba(0, 0, 0, 0.08),
         0px 18px 80px rgba(0, 0, 0, 0.12);
+}
 
-
+.selettore-lingua{
+    background-color: var(--quar) !important;
+    padding: 0.5rem !important;
+    /* color: var(--quar) !important; */
+    /* border: 1px solid var(--quar) !important; */
 }
 
 .categorie-navbar:hover{

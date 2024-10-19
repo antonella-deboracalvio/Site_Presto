@@ -3,7 +3,7 @@
         <a class="navbar-brand text-white" href="{{ route('welcome') }}"><img src="/storage/img/logotipo.png"
                 alt="logotipo"></a>
 
-              
+            
         @auth
 
             @if (Auth::user()->is_revisor)
@@ -27,16 +27,30 @@
             </button>
 
         @endauth
-        <x-_locale lang='it' />
-        <x-_locale lang='en' />
-        <x-_locale lang='de' />
-        <x-_locale lang='ja' />
+
         <button class="navbar-toggler py-2 btn-info-custom my-bg-quar btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-compass fs-5"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
+                <li>
+                    {{-- selezione lingua --}}
+                    <div class="dropdown">
+                        <button class="bg-transparent border-0 p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="{{asset('vendor/blade-flags/language-' . $lang . '.svg')}}" width="32" height="32" />
+                        </button>
+                        <ul class="dropdown-menu bg-transparent border-0">
+                            <li> <x-_locale lang='it' /></li>
+                            <li> <x-_locale lang='en' /></li>
+                            <li> <x-_locale lang='de' /></li>
+                            <li> <x-_locale lang='ja' /></li>
+                        </ul>
+                    </div>
+                    
+                    {{-- fine selezione lingua --}}
+                </li>
+
                 <li class="nav-item">
                                                                         {{-- prova traduzione --}}
                     <a class="nav-link text-white link-navbar" href="{{ route('indexArticle') }}">
