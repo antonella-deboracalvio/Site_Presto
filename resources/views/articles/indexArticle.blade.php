@@ -5,9 +5,9 @@
                 <h1 class="my-text-main fw-bold text-center display-2">{{__("ui.all articles")}}</h1>
             </div>
         </div>
-        <div class="row justify-content-evenly">
+        <div class="row w-100 justify-content-evenly">
             @forelse ($articles as $article)
-            <div class="col-6 col-md-4 mt-4 card-container-custom">
+            <div class="col-12 col-md-3 mt-4 me-5">
                 <x-card :article="$article" />
             </div>
         @empty

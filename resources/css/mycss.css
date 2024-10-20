@@ -241,6 +241,7 @@ main{
 
 .card-container-custom {
     width: 300px;
+    height: auto;
 }
 
 .card-custom{
@@ -494,4 +495,9 @@ main{
 
     /* FINE OFFCANVAS */
 
+    /* INDEX */
+    .card-container-custom {
+        width: auto;
+        height: auto;
+    }
 }
