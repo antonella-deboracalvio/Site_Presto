@@ -38,49 +38,14 @@
                             {{__("ui.$category->name")}}</option>
                             @endforeach
                             
-                        </select>
-                        @error('category')
+                    </select>
+                    @error('category')
                         <p class="text-danger">{{ $message }}</p>
-                        @enderror
-                    </div>
+                    @enderror
                 </div>
-                
-                {{-- immagine --}}
-                
-                <div class="col-12 col-md-6">
-                    <div class="mb-3 container-custom">
-                        <input type="file" class="form-control input-custom w-100" id="image" wire:model.live="temporary_images" multiple>
-                        @error('temporary_images.*')
-                        <p class="text-danger">{{ $message }}</p>
-                        @enderror
-                        @error('temporary_images')
-                        <p class="text-danger">{{ $message }}</p>
-                        @enderror
-                    </div>
-                </div>
-                @if (count($images) > 0)
-            
-                <div class="col-12 col-md-6">
-                    <div class="mb-3 container-custom">
-                        <p>{{__("ui.image preview")}}</p>
-                        <div class="row">
-                            @foreach ($images as $key=> $image)
-                            <div class="col-12">
-                                <div class="img-preview" style="background-image: url({{ $image->temporaryUrl() }});">
-                                    
-                                </div>
-                                <button type="button" class="btn btn-danger" wire:click="removeImage({{ $key }})">X</button>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                @endif
-                
-                
                 {{-- descrizione --}}
-                <div class="col-12 col-md-6">
-                    <div class="mb-3 container-custom">
+                <div class="col-12">
+                    <div class="mb-3 container-custom w-100">
                         <textarea class="form-control input-custom w-100" placeholder="{{__("ui.description")}}" cols="30" rows="10"
                         id="description" wire:model.blur="description"></textarea>
                         @error('description')
@@ -88,10 +53,42 @@
                         @enderror
                     </div>
                 </div>
-                {{-- crea --}}
-                <div class="col-12 d-flex justify-content-center mt-5">
-                    <button type="submit" class="btn btn-info-custom my-bg-quar">{{__("ui.create")}}</button>
+            </div>
+                
+                {{-- immagine --}}
+                
+                <div class="col-12 col-md-6">
+                    <div class="mb-3 container-custom">
+                        <input type="file" class="form-control input-custom py-2 w-100" id="image" wire:model.live="temporary_images" multiple>
+                        @error('temporary_images.*')
+                        <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                        @error('temporary_images')
+                        <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+                
+                @if (count($images) > 0)
+                <p class="text-white">{{__("ui.image preview")}}</p>
+                    <div class="row mb-3">
+                        
+                            @foreach ($images as $key=> $image)
+                            <div class="col-4 mt-3 d-flex justify-content-center">
+                                <div class="img-preview rounded d-flex justify-content-end" style="background-image: url({{ $image->temporaryUrl() }});">
+                                    <button wire:click="removeImage({{ $key }})" type="button" class="btn my-bg-acc btn-elimina-img text-white">X</button>
+                                </div>
+                            </div>
+                            @endforeach
+                        
+                    </div>
                 </div>
+                @endif
+                
+                
+            </div>
+            {{-- crea --}}
+            <div class="col-12 d-flex justify-content-center mt-5">
+                <button type="submit" class="btn btn-info-custom my-bg-quar">{{__("ui.create")}}</button>
             </div>
             
         </form>

@@ -257,15 +257,6 @@ main{
     width: 25%;
 }
 
-.container-custom {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    position: relative;
-    color: white;
-
-}
-
 .input-custom::placeholder {
     color: #fff;
 }
@@ -391,6 +382,10 @@ main{
     background-size: cover;
     height: 120px;
     width: 120px;
+}
+
+.btn-elimina-img{
+    height: fit-content;
 }
 
 /* FINE FORM ARTICOLO */

@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout >
     <div class="container-fluid container-create-article align-content-center">
         
         <div class="row justify-content-end">
