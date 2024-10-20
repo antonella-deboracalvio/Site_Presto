@@ -7,7 +7,7 @@
         </div>
         <div class="row justify-content-evenly">
             @forelse ($articles as $article)
-            <div class="col-6 col-md-4 mt-4">
+            <div class="col-6 col-md-4 mt-4 card-container-custom">
                 <x-card :article="$article" />
             </div>
         @empty

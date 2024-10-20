@@ -234,9 +234,29 @@ main{
 /* FINE WELCOME */
 
 /* INDEX */
+
+.card {
+    width: auto;
+}
+
+.card-container-custom {
+    width: 300px;
+}
+
 .card-custom{
     transition: 0.5s;
 }
+
+.card-image-custom {
+    height: 183px;
+    width: 300px;
+}
+
+.revisor-image-custom {
+    
+    width: 300px;
+}
+
 /* FINE INDEX */
 
 

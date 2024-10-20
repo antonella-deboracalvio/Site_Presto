@@ -54,7 +54,7 @@ return
     'vendi quel vecchio servizio di pentole' => 'Sell that old cookware set',
     'non perderti le ultime occasioni fai' => "Don’t miss the latest opportunities",
 
-    'presto' => 'Hurry',
+    'presto' => 'Hurry up',
     'vuoi diventare revisore?' => 'Want to be a revisor?',
     'clicca qui per inviare la tua richiesta' => 'Click here to send your request',
     'lorem ipsum' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum harum corrupti dicta, aliquam sequi voluptate quas.',
