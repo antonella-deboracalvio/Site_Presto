@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <x-navbar lang="{{App::getLocale()}}"/>
+    <x-navbar />
     <main>
         {{ $slot }}
     </main>

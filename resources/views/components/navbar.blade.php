@@ -38,7 +38,7 @@
                     {{-- selezione lingua --}}
                     <div class="dropdown">
                         <button class="bg-transparent border-0 p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{asset('vendor/blade-flags/language-' . $lang . '.svg')}}" width="32" height="32" />
+                            <img src="{{asset('vendor/blade-flags/language-' . App::getLocale() . '.svg')}}" width="32" height="32" />
                         </button>
                         <ul class="dropdown-menu bg-transparent border-0">
                             <li> <x-_locale lang='it' /></li>
