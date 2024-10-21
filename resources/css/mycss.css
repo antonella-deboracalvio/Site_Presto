@@ -149,20 +149,14 @@ main{
 } */
 
 .btn-flag{
-    transition: 0.5s;
+    transition: 0.5s !important;
 }
 
 .btn-flag:hover{
-    transform: scale(1.1);
-    transition: 0.5s;
+    transform: scale(1.1) !important;
+    transition: 0.5s !important;
 }
 
-.selettore-lingua{
-    background-color: #3b629ee1 !important;
-    backdrop-filter: blur(5px);
-    /* color: var(--quar) !important; */
-    /* border: 1px solid var(--quar) !important; */
-}
 
 .categorie-navbar:hover{
     background-color: var(--quar) !important;
@@ -494,7 +488,7 @@ main{
     .user-btn {
         position: absolute;
         top: 8px;
-        right: 110px;
+        right: 80px;
     }
 
     .notifica-revisore {
@@ -506,8 +500,8 @@ main{
 
     .container-lang{
         position: absolute;
-        top: 8px;
-        right: 60px;
+        top: 80px;
+        right: 5px;
     }
 
 

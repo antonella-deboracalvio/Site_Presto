@@ -57,31 +57,31 @@
             {{-- selezione lingua --}}
             <ul class="m-0 me-3 list-unstyled container-lang">
                 <li class="lang-button-custom">
-                    <div class="dropdown">
+                    <div class="dropstart">
                         <button class="bg-transparent border-0 p-0 btn-flag" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <img src="{{ asset('vendor/blade-flags/language-' . App::getLocale() . '.svg') }}"
                                 width="32" height="32" />
                         </button>
-                        <ul class="dropdown-menu bg-transparent border-0">
+                        <div class="dropdown-menu w-100 text-nowrap bg-transparent border-0 pt-0 text-end me-2">
                             @if (App::getLocale() == 'it')
-                                <li class="mb-2 btn-flag"> <x-_locale lang='en' /></li>
-                                <li class="mb-2 btn-flag"> <x-_locale lang='de' /></li>
-                                <li class="mb-2 btn-flag"> <x-_locale lang='ja' /></li>
+                                <span class="mb-2"> <x-_locale lang='en' /></span>
+                                <span class="mb-2"> <x-_locale lang='de' /></span>
+                                <span class="mb-2"> <x-_locale lang='ja' /></span>
                             @elseif (App::getLocale() == 'en')
-                                <li class="mb-2 btn-flag"> <x-_locale lang='it' /></li>
-                                <li class="mb-2 btn-flag"> <x-_locale lang='de' /></li>
-                                <li class="mb-2 btn-flag"> <x-_locale lang='ja' /></li>
+                                <span class="mb-2"> <x-_locale lang='it' /></span>
+                                <span class="mb-2"> <x-_locale lang='de' /></span>
+                                <span class="mb-2"> <x-_locale lang='ja' /></span>
                             @elseif (App::getLocale() == 'de')
-                                <li class="mb-2 btn-flag"> <x-_locale lang='it' /></li>    
-                                <li class="mb-2 btn-flag"> <x-_locale lang='en' /></li>
-                                <li class="mb-2 btn-flag"> <x-_locale lang='ja' /></li>
+                                <span class="mb-2"> <x-_locale lang='it' /></span>    
+                                <span class="mb-2"> <x-_locale lang='en' /></span>
+                                <span class="mb-2"> <x-_locale lang='ja' /></span>
                             @elseif (App::getLocale() == 'ja')
-                                <li class="mb-2 btn-flag"> <x-_locale lang='it' /></li>    
-                                <li class="mb-2 btn-flag"> <x-_locale lang='en' /></li>
-                                <li class="mb-2 btn-flag"> <x-_locale lang='de' /></li>
+                                <span class="mb-2"> <x-_locale lang='it' /></span>    
+                                <span class="mb-2"> <x-_locale lang='en' /></span>
+                                <span class="mb-2"> <x-_locale lang='de' /></span>
                             @endif
-                        </ul>
+                        </div>
                     </div>
 
                 </li>
