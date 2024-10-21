@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container mt-5">
+    <div class="container px-3 px-md-0 mt-5">
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-md-6">
                 @if ($article->images->count() > 0)
@@ -37,7 +37,10 @@
                     </div>
 
                 @else
-                    <img src="/storage/img/default.jpg" alt="Nessuna foto inserita dall'utente">
+                    <div class="position-relative">
+                        <button id="btnHeart" class="btn btn-light rounded-pill icon-heart my-text-acc">  <i id="heartIcon" class="fa-regular fa-heart"></i></button>
+                        <img class="w-100 rounded" src="/storage/img/default.jpg" alt="Nessuna foto inserita dall'utente">
+                    </div>
                 @endif
 
 
@@ -50,8 +53,8 @@
                     <i class="fa-solid fa-circle-right ms-1"></i></a>
                 <h2 class="text-danger montserrat-bold border-top border-bottom py-1">€{{ $article->price }} </h2>
                 <p>{{__("ui.data di creazione")}}: {{ $article->created_at->format('d/m/Y') }}</p>
-                <p class="border-bottom pb-2">{{__("ui.advertiser")}}: {{ $article->user->name }}</p>
-                <a class="btn my-bg-quar btn-info-custom w-50 mb-3 noto-bold w-100" href="#">{{__("ui.contact")}}
+                <p class="border-bottom pb-2  mb-2">{{__("ui.advertiser")}}: {{ $article->user->name }}</p>
+                <a class="btn my-bg-quar btn-info-custom w-50 mb-2 noto-bold w-100" href="#">{{__("ui.contact")}}
                     <i class="fa-solid fa-message ms-1"></i>
                 </a>
                 <p class="d-block mb-1 noto-bold border-top pt-2">{{__("ui.description")}}:</p>

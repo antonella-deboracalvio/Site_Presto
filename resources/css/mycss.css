@@ -481,6 +481,15 @@ main{
 
     right: -17px;
     top: -17px;
+
+    transition : 0.2s;
+}
+
+.btn-elimina-img:hover{
+    background-color: red !important;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 10px var(--main);
+    transition : 0.2s;
 }
 
 /* FINE FORM ARTICOLO */
@@ -603,5 +612,12 @@ main{
     .img-preview{
         height: 100px;
         width: 100px;
+    }
+
+
+    /* REVISORE */
+    .revisor-image-custom {
+    
+        width: 150px;
     }
 }
