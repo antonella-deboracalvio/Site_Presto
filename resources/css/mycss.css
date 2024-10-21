@@ -8,19 +8,19 @@
 
 /* colori di sfondo */
 .my-bg-main {
-    background-color: var(--main);
+    background-color: var(--main) !important;
 }
 
 .my-bg-sec {
-    background-color: var(--sec);
+    background-color: var(--sec) !important;
 }
 
 .my-bg-ter {
-    background-color: var(--ter);
+    background-color: var(--ter) !important;
 }
 
 .my-bg-quar {
-    background-color: var(--quar);
+    background-color: var(--quar) !important;
 }
 
 .my-bg-acc {
@@ -33,19 +33,19 @@
 }
 
 .my-text-sec {
-    color: var(--sec);
+    color: var(--sec) !important;
 }
 
 .my-text-ter {
-    color: var(--ter);
+    color: var(--ter) !important;
 }
 
 .my-text-quar {
-    color: var(--quar);
+    color: var(--quar) !important;;
 }
 
 .my-text-acc {
-    color: var(--acc);
+    color: var(--acc) !important;
 }
 
 /* colori dei bordi */
