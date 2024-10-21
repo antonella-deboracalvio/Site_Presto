@@ -30,6 +30,7 @@ class CreateArticleForm extends Component
 
     // attributi immagini
     public $images = [];
+    #[Validate('max:6', message: 'Max 6 immagini')]
     public $temporary_images;
 
     public function cleanForm(){

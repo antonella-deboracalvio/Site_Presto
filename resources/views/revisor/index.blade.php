@@ -22,13 +22,13 @@
         {{-- immagini --}}
         
         @if ($article_to_check)
-        <div class="row justify-content-center align-items-center">
+        <div class="row justify-content-center align-items-center mt-5">
             
             @if ($article_to_check->images->count())
             
             @foreach ($article_to_check->images as $key => $image)
             <div class="col-4 d-flex justify-content-center align-items-center">
-                <img class="revisor-image-custom" src="{{ Storage::url($image->path) }}"
+                <img class="revisor-image-custom mb-5" src="{{ $image->getUrl(300, 300) }}"
                 alt="Immagine {{ $key + 1 }} dell'articolo {{ $article_to_check->title }}"
                 class="img-fluid">
             </div>
