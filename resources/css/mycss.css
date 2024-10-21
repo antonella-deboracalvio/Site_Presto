@@ -105,15 +105,18 @@ main{
     color: var(--quar) !important;
 }
 
-.user-btn {
+/* .user-btn {
     position: absolute;
     top: 20px;
     right: 13px;
-}
+} */
+
+
 
 .search-bar-nav {
     min-width: 200% !important;
-    margin-left: 300%;
+    height: 37px;
+    /* margin-left: 300%; */
 }
 
 .navbar-brand img {
@@ -126,6 +129,12 @@ main{
     top: 22px;
     right: 10px;
 }
+
+
+/* .lang-button-custom{
+    margin-left: 200%;
+    
+} */
 
 /* WELCOME */
 .header-custom {
