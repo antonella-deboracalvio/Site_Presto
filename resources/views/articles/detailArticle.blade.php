@@ -42,20 +42,20 @@
 
 
             </div>
-            <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
-                <h1>{{ $article->title }}</h1>
+            <div class="col-12 col-md-5 ms-md-5 mt-3 mt-md-0 d-flex bg-light rounded border pt-1 flex-column">
+                <h1 class="montserrat-bold border-bottom w-100">{{ $article->title }}</h1>
 
-                <a class="btn my-bg-quar btn-info-custom w-50 mb-5"
+                <a class="btn my-bg-quar btn-info-custom w-50 mb-2 noto-bold w-100"
                     href="{{ route('byCategory', ['category' => $article->category]) }}">{{ $article->category->name }}
                     <i class="fa-solid fa-circle-right ms-1"></i></a>
-                <h2 class="text-danger">€{{ $article->price }} </h2>
+                <h2 class="text-danger montserrat-bold border-top border-bottom py-1">€{{ $article->price }} </h2>
                 <p>{{__("ui.data di creazione")}}: {{ $article->created_at->format('d/m/Y') }}</p>
-                <p>{{__("ui.advertiser")}}: {{ $article->user->name }}</p>
-                <a class="btn my-bg-quar btn-info-custom w-50 mb-5" href="#">{{__("ui.contact")}}<i
-                        class="fa-solid fa-message ms-1"></i></a>
-            </div>
-            <div class="col-12 mt-3">
-                <p>{{__("ui.description")}}: {{ $article->description }}</p>
+                <p class="border-bottom pb-2">{{__("ui.advertiser")}}: {{ $article->user->name }}</p>
+                <a class="btn my-bg-quar btn-info-custom w-50 mb-3 noto-bold w-100" href="#">{{__("ui.contact")}}
+                    <i class="fa-solid fa-message ms-1"></i>
+                </a>
+                <p class="d-block mb-1 noto-bold border-top pt-2">{{__("ui.description")}}:</p>
+                <p> {{ $article->description }}</p>
             </div>
         </div>
     </div>

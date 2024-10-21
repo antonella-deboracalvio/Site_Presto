@@ -39,19 +39,19 @@
 
 
 span, p, a {
-    font-family: 'Noto Sans', sans-serif;
-}
-
-.noto-bold {
-    font-family: 'Noto Sans Bold', sans-serif;
+    font-family: 'Noto Sans', sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.noto-bold {
+    font-family: 'Noto Sans Bold', sans-serif !important;
 }
 
 .montserrat-bold {
-    font-family: 'Montserrat Bold', sans-serif;
+    font-family: 'Montserrat Bold', sans-serif !important;
 }
 
 
@@ -475,7 +475,12 @@ main{
 }
 
 .btn-elimina-img{
+    position: absolute;
     height: fit-content;
+    border-radius: 50%;
+
+    right: -17px;
+    top: -17px;
 }
 
 /* FINE FORM ARTICOLO */
@@ -591,5 +596,12 @@ main{
         z-index: 100;
         opacity: 0.5;
         
+    }
+
+
+    /* INSERIMENTO ARTICOLO */
+    .img-preview{
+        height: 100px;
+        width: 100px;
     }
 }

@@ -1,5 +1,5 @@
 <x-layout >
-    <div class="container-fluid container-create-article align-content-center">
+    <div class="container-fluid h-auto container-create-article align-content-center">
         
         <div class="row justify-content-end">
             <div class="col-12 col-md-6 m-md-5 p-5 row-create-article">
