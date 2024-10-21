@@ -270,6 +270,16 @@ main{
 /* FINE INDEX */
 
 
+/* ICONA  */
+.icon-heart{
+    position: absolute;
+    top:10px;
+    left: 90%;
+    font-size: 2rem;   
+    z-index: 100;
+    opacity: 0.5;
+    
+}
 
 
 
@@ -512,5 +522,16 @@ main{
     .card-container-custom {
         width: auto;
         height: auto;
+    }
+
+    /* ICONA */
+    .icon-heart{
+        position: absolute;
+        top:10px;
+        left: 85%;
+        font-size: 2rem;   
+        z-index: 100;
+        opacity: 0.5;
+        
     }
 }

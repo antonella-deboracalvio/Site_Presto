@@ -72,7 +72,7 @@
                 <p class="text-white">{{__("ui.image preview")}}</p>
                     <div class="row mb-3">
                         @foreach ($images as $key=> $image)
-                            <div class="col-4 mt-3 d-flex justify-content-center">
+                            <div wire:key="{{ $key }}" class="col-4 mt-3 d-flex justify-content-center">
                                 <div class="img-preview rounded d-flex justify-content-end" style="background-image: url({{ $image->temporaryUrl() }});">
                                     <button wire:click="removeImage({{ $key }})" type="button" class="btn my-bg-acc btn-elimina-img text-white">X</button>
                                 </div>

@@ -7,14 +7,17 @@
 
                     {{-- carosello --}}
                     <div id="carouselExample" class="carousel slide">
-
+                        <button id="btnHeart" class="btn btn-light rounded-pill icon-heart my-text-acc">  <i id="heartIcon" class="fa-regular fa-heart "></i></button>
                         <div class="carousel-inner rounded">
                             {{-- foreach per il carosello --}}
                             
                             @foreach ($article->images as $key => $image)
                                 <div class="carousel-item  @if ($loop->first) active @endif">
                                     <div class="bg-black"></div>
+                                    <div>
                                         <img src="{{ $image->getUrl(300, 300) }}" class="d-block w-100 rounded shadow" alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
+                                    </div>
+                
                                     </div>
                             @endforeach
                             {{-- fine foreach --}}
@@ -34,7 +37,7 @@
                     </div>
 
                 @else
-                    <img src="https://mdbootstrap.com/img/new/standard/nature/111.webp" alt="Nessuna foto inserita dall'utente">
+                    <img src="/storage/img/default.jpg" alt="Nessuna foto inserita dall'utente">
                 @endif
 
 
@@ -45,7 +48,7 @@
                 <a class="btn my-bg-quar btn-info-custom w-50 mb-5"
                     href="{{ route('byCategory', ['category' => $article->category]) }}">{{ $article->category->name }}
                     <i class="fa-solid fa-circle-right ms-1"></i></a>
-                <h2>€{{ $article->price }} </h2>
+                <h2 class="text-danger">€{{ $article->price }} </h2>
                 <p>{{__("ui.data di creazione")}}: {{ $article->created_at->format('d/m/Y') }}</p>
                 <p>{{__("ui.advertiser")}}: {{ $article->user->name }}</p>
                 <a class="btn my-bg-quar btn-info-custom w-50 mb-5" href="#">{{__("ui.contact")}}<i
