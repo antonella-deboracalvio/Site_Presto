@@ -19,6 +19,8 @@
         </div>
     </header>
 
+
+    {{-- testo scorrevole --}}
     <div class="testo-scorrevole h-auto my-bg-main py-md-5">
         <span class="my-text-quar display-3 fw-bolder py-2">{{__("ui.non perderti le ultime occasioni fai")}}...<span class="my-text-acc"><span></span> {{__("ui.presto")}}!</span> </span>
     </div>
@@ -27,15 +29,15 @@
         <div class="row justify-content-evenly">
             
             @forelse ($articles as $article)
-                <a href="{{ route('detailArticle', compact('article')) }}" class="col-md-5 mx-3 col-11 articles-home mt-md-5 text-decoration-none align-content-center rounded-3" data-aos="zoom-in-up">
+                <a href="{{ route('detailArticle', compact('article')) }}" class="col-md-5 mx-3 col-11 articles-home mt-md-5 text-decoration-none align-content-center rounded-3" data-aos="zoom-in-up" style="background-image: linear-gradient(#141b41c2, #141b41c2), url({{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : '/storage/img/default.jpg'}});">
                     <div class="row">
                         <div class="col-4 container-vetro align-content-center ms-5">
                             <h3 class="text-white">{{ $article->title }}</h3>
                         </div>
                         <div class="col-4 align-content-center ms-auto me-5 preview-last-articles">
-                            <h3 class="text-white">€{{ $article->price }}</h3>
-                            {{-- ! non sono riuscito a tradurre la categoria nel foreach, per qualche motivo se scrivo {{__('ui.$article->category->name')}} mi conta il ->name come stringa. se uso i doppi apici mi conta tutto come stringa --}}
-                            <h3 class="text-white">{{ $article->category->name }}</h3>
+                            <h3 class="text-white montserrat-bold">€{{ $article->price }}</h3>
+                            
+                            <h3 class="text-white">{{__("ui.".$article->category->name)}}</h3>
                         </div>
                     </div>
                 </a>
