@@ -7,8 +7,8 @@
       <div class="col-8 px-0 col-md-12">
         <h6 class="card-header text-decoration-none border ">{{__("ui.". $article->category->name)}}</h6>
         <div class="card-header py-1 border-start">
-          <h5 class="card-title fs-5"> {{ $article->title }}</h5>
-          <h5 class="card-title my-text-acc mb-0">€{{ $article->price }}</h5>
+          <h5 class="card-title montserrat-bold fs-5"> {{ $article->title }}</h5>
+          <h5 class="card-title  montserrat-bold my-text-acc mb-0">€{{ $article->price }}</h5>
         </div>
         <div class="card-footer border">{{$article->created_at->diffForHumans()}}</div>
       </div>

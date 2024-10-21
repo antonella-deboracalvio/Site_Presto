@@ -55,7 +55,7 @@
 
 
             {{-- selezione lingua --}}
-            <ul class="m-0 me-3 list-unstyled">
+            <ul class="m-0 me-3 list-unstyled container-lang">
                 <li class="lang-button-custom">
                     <div class="dropdown">
                         <button class="bg-transparent border-0 p-0 btn-flag" type="button" data-bs-toggle="dropdown"

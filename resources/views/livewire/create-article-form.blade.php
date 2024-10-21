@@ -68,7 +68,7 @@
                         @enderror
                     </div>
                 
-                @if (count($images) > 0)
+                @if (!empty($images))
                 <p class="text-white">{{__("ui.image preview")}}</p>
                     <div class="row mb-3">
                         @foreach ($images as $key=> $image)

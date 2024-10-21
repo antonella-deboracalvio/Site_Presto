@@ -34,7 +34,7 @@
                     </div>
 
                 @else
-                    <img src="https://mdbootstrap.com/img/new/standard/nature/111.webp" alt="Nessuna foto inserita dall'utente">
+                    <img src="/storage/img/default.jpg" alt="Nessuna foto inserita dall'utente">
                 @endif
 
 
