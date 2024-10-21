@@ -28,4 +28,5 @@ class PublicController extends Controller
         return redirect()->back();
     }
 
+
 }

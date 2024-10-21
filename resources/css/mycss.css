@@ -69,6 +69,9 @@
     border: 1px solid var(--acc) !important;
 }
 
+
+
+
 main{
     min-height: 70vh;
 }
@@ -89,9 +92,18 @@ main{
         0px 18px 80px rgba(0, 0, 0, 0.12);
 }
 
+.btn-flag{
+    transition: 0.5s;
+}
+
+.btn-flag:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
 .selettore-lingua{
-    background-color: var(--quar) !important;
-    padding: 0.5rem !important;
+    background-color: #3b629ee1 !important;
+    backdrop-filter: blur(5px);
     /* color: var(--quar) !important; */
     /* border: 1px solid var(--quar) !important; */
 }
@@ -104,13 +116,6 @@ main{
 .link-navbar:hover {
     color: var(--quar) !important;
 }
-
-/* .user-btn {
-    position: absolute;
-    top: 20px;
-    right: 13px;
-} */
-
 
 
 .search-bar-nav {
@@ -127,14 +132,9 @@ main{
     position: absolute;
     z-index: 100;
     top: 22px;
-    right: 10px;
+    right: -5px;
 }
 
-
-/* .lang-button-custom{
-    margin-left: 200%;
-    
-} */
 
 /* WELCOME */
 .header-custom {
@@ -426,6 +426,10 @@ main{
 @media screen and (max-width: 700px) {
 
     /* NAVBAR */
+    .navbar-brand img {
+        width: 100px;
+    }
+
     .search-bar-nav {
         min-width: 85% !important;
         margin-left: 0px;
@@ -433,14 +437,14 @@ main{
 
     .user-btn {
         position: absolute;
-        top: 20px;
+        top: 8px;
         right: 80px;
     }
 
     .notifica-revisore {
         position: absolute;
         z-index: 100;
-        top: 22px;
+        top: 12px;
         right: 75px;
     }
 

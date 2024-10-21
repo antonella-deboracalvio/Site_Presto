@@ -3,7 +3,6 @@
         <a class="navbar-brand text-white" href="{{ route('welcome') }}"><img src="/storage/img/logotipo.png"
                 alt="logotipo"></a>
 
-      
 
         <button class="navbar-toggler py-2 btn-info-custom my-bg-quar btn" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,16 +12,19 @@
 
             <ul class="navbar-nav">
                 {{-- tutti gli articoli --}}
-                <li class="nav-item list-unstyled d-flex dropdown">
+                <li class="nav-item list-unstyled">
                     <a class="nav-link text-white link-navbar" href="{{ route('indexArticle') }}">
                         {{ __('ui.all articles') }}
                     </a>
+                </li>
+
+                <li class="nav-item list-unstyled d-flex dropdown">
                 {{-- tutte le categorie --}}
                     <a class="nav-link dropdown-toggle text-white link-navbar" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         {{ __('ui.categories') }}
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
+                    <ul class="dropdown-menu">
                         @foreach ($categories as $category)
                             <li> 
                                 <a class="dropdown-item categorie-navbar"
@@ -38,8 +40,8 @@
 
 
             {{-- search bar --}}
-            <ul class="m-0">
-                <li>
+            <ul class="m-0 p-0">
+                <li class="nav-item list-unstyled">
                     <form class="d-flex justify-content-center align-items-center form-search-nav py-3 py-md-0" role="search"
                         method="GET" action="{{ route('searchArticles') }}">
                         <input class="form-control input-custom me-2 search-bar-nav" type="search" name="query"
@@ -53,19 +55,32 @@
 
 
             {{-- selezione lingua --}}
-            <ul class="m-0 list-unstyled">
+            <ul class="m-0 me-3 list-unstyled">
                 <li class="lang-button-custom">
                     <div class="dropdown">
-                        <button class="bg-transparent border-0 p-0" type="button" data-bs-toggle="dropdown"
+                        <button class="bg-transparent border-0 p-0 btn-flag" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <img src="{{ asset('vendor/blade-flags/language-' . App::getLocale() . '.svg') }}"
                                 width="32" height="32" />
                         </button>
                         <ul class="dropdown-menu bg-transparent border-0">
-                            <li> <x-_locale lang='it' /></li>
-                            <li> <x-_locale lang='en' /></li>
-                            <li> <x-_locale lang='de' /></li>
-                            <li> <x-_locale lang='ja' /></li>
+                            @if (App::getLocale() == 'it')
+                                <li class="mb-2 btn-flag"> <x-_locale lang='en' /></li>
+                                <li class="mb-2 btn-flag"> <x-_locale lang='de' /></li>
+                                <li class="mb-2 btn-flag"> <x-_locale lang='ja' /></li>
+                            @elseif (App::getLocale() == 'en')
+                                <li class="mb-2 btn-flag"> <x-_locale lang='it' /></li>
+                                <li class="mb-2 btn-flag"> <x-_locale lang='de' /></li>
+                                <li class="mb-2 btn-flag"> <x-_locale lang='ja' /></li>
+                            @elseif (App::getLocale() == 'de')
+                                <li class="mb-2 btn-flag"> <x-_locale lang='it' /></li>    
+                                <li class="mb-2 btn-flag"> <x-_locale lang='en' /></li>
+                                <li class="mb-2 btn-flag"> <x-_locale lang='ja' /></li>
+                            @elseif (App::getLocale() == 'ja')
+                                <li class="mb-2 btn-flag"> <x-_locale lang='it' /></li>    
+                                <li class="mb-2 btn-flag"> <x-_locale lang='en' /></li>
+                                <li class="mb-2 btn-flag"> <x-_locale lang='de' /></li>
+                            @endif
                         </ul>
                     </div>
 
@@ -87,32 +102,30 @@
 
     </div>
 
-     {{-- pulsante utente --}}
-     @auth
+    {{-- pulsante utente --}}
+    @auth
 
-     @if (Auth::user()->is_revisor)
-         <li class="nav-item list-unstyled">
-             @if (\App\Models\Article::toBeRevisedCount() > 0)
-                 <span class="notifica-revisore translate-middle badge rounded-pill bg-danger">
-                     {{ \App\Models\Article::toBeRevisedCount() }}
-                 </span>
-             @endif
-         </li>
-     @endif
+        @if (Auth::user()->is_revisor)
+            <li class="nav-item list-unstyled">
+                @if (\App\Models\Article::toBeRevisedCount() > 0)
+                    <span class="notifica-revisore translate-middle badge rounded-pill bg-danger">
+                        {{ \App\Models\Article::toBeRevisedCount() }}
+                    </span>
+                @endif
+            </li>
+        @endif
 
-     <button class="btn my-bg-quar btn-info-custom ms-auto me-3 user-btn" type="button" data-bs-toggle="offcanvas"
-         data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-         {{ Auth::user()->name }} <i class="fa-solid fa-user ms-1"></i>
-     </button>
- @else
-     <button id="login-btn" class="btn my-bg-quar btn-info-custom ms-auto me-3 user-btn" type="button"
-         data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-         <i class="fa-regular fa-user"></i>
-     </button>
+        <button class="btn my-bg-quar btn-info-custom ms-auto me-3 text-nowrap user-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            {{ Auth::user()->name }} <i class="fa-solid fa-user ms-1"></i>
+        </button>
+    @else
+        <button id="login-btn" class="btn my-bg-quar btn-info-custom ms-auto me-3 user-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <i class="fa-regular fa-user"></i>
+        </button>
 
- @endauth
+    @endauth
 
-  {{-- fine pulsante utente --}}
+{{-- fine pulsante utente --}}
 </nav>
 
 <script>
