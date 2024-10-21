@@ -1,4 +1,8 @@
-console.log("ciao");
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
+
 
 let btnHeart= document.querySelector("#btnHeart")
 let heartIcon = document.querySelector("#heartIcon")
