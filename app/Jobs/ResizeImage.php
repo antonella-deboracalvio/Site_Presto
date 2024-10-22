@@ -3,7 +3,9 @@
 namespace App\Jobs;
 
 use Spatie\Image\Image;
+use Spatie\Image\Enums\Unit;
 use Spatie\Image\Enums\CropPosition;
+use Spatie\Image\Enums\AlignPosition;
 use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
@@ -35,6 +37,16 @@ class ResizeImage implements ShouldQueue
 
         Image::load($srcPath)
         ->crop($w, $h, CropPosition::Center)
+        ->watermark(
+            base_path('storage/app/public/img/logotipo.png'),
+            // AlignPosition::Center,
+            width: 200,
+            height: 200,
+            alpha: 40,
+            paddingX: 20,
+            paddingY: 35,
+            paddingUnit: Unit::Percent
+        )
         ->save($destPath);
     }
     
