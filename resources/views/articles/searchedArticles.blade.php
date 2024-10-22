@@ -8,7 +8,7 @@
         </div>
         <div class="row w-100 justify-content-evenly">
             @forelse ($articles as $article)
-                <div class="col-12 col-md-3 mt-4 me-5">
+                <div class="col-12 col-md-4 mt-4 justify-content-center d-flex">
                     <x-card :article="$article" />
                 </div>
             @empty
