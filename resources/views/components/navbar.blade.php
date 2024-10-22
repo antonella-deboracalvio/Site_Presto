@@ -20,11 +20,11 @@
 
                 <li class="nav-item list-unstyled d-flex dropdown">
                 {{-- tutte le categorie --}}
-                    <a class="nav-link dropdown-toggle text-white link-navbar" href="#" role="button"
+                    <a class="nav-link dropdown-toggle text-white link-navbar " href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         {{ __('ui.categories') }}
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu text-align-center dropdownCustom">
                         @foreach ($categories as $category)
                             <li> 
                                 <a class="dropdown-item categorie-navbar"
