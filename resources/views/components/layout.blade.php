@@ -22,7 +22,7 @@
     <main>
         {{ $slot }}
     </main>
-    <x-footer />
+    <x-footer/>
     
     
     {{-- offcanvas con form di login/register --}}

@@ -14,22 +14,22 @@
             </div>
             {{-- titolo, prezzo e categoria --}}
             <div class="col-12 col-md-6">
-                <div class="mb-3 container-custom">
-                    <input type="text" placeholder="{{__("ui.title")}}" class="form-control input-custom w-100 py-2" id="title"
+                <div class="mb-3 container-custom ">
+                    <input type="text" placeholder="{{__("ui.title")}}" class="form-control input-custom w-100 py-2 fs-5" id="title"
                     wire:model.blur="title">
                     @error('title')
                     <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="mb-3 container-custom">
-                    <input type="text" class="form-control input-custom w-100 py-2" placeholder="{{__("ui.price")}}"
+                    <input type="text" class="form-control input-custom w-100 py-2 fs-5" placeholder="{{__("ui.price")}}"
                     id="price" wire:model.blur="price">
                     @error('price')
                     <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="mb-3 container-custom">
-                    <select class="form-select my-bg-sec text-white" id="category" wire:model="category">
+                    <select class="form-select my-bg-sec text-white fs-5" id="category" wire:model="category">
                         <option class="my-bg-ter text-white select-custom" label disabled>{{__("ui.select a category")}}
                         </option>
                         
@@ -46,7 +46,7 @@
                 {{-- descrizione --}}
                 <div class="col-12">
                     <div class="mb-3 container-custom w-100">
-                        <textarea class="form-control input-custom w-100" placeholder="{{__("ui.description")}}" cols="30" rows="10"
+                        <textarea class="form-control input-custom w-100 fs-5" placeholder="{{__("ui.description")}}" cols="30" rows="10"
                         id="description" wire:model.blur="description"></textarea>
                         @error('description')
                         <p class="text-danger">{{ $message }}</p>
@@ -58,7 +58,7 @@
                 {{-- immagine --}}
                 
                 <div class="col-12 col-md-6">
-                    <div class="mb-3 container-custom">
+                    <div class="mb-3 container-custom ">
                         <input type="file" class="form-control input-custom py-2 w-100" id="image" wire:model.live="temporary_images" multiple>
                         @error('temporary_images.*')
                         <p class="text-danger">{{ $message }}</p>

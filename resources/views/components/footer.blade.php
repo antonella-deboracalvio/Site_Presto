@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="my-bg-ter text-center text-white mt-5">
+<footer class="my-bg-ter text-center text-white footerCustom">
     <!-- Grid container -->
     <div class="container p-4">
       <!-- Section: Social media -->
@@ -68,16 +68,16 @@
   
             <ul class="list-unstyled mb-0">
               <li>
-                <a class="text-white text-decoration-none" href="#!">Link 1</a>
+                <a class="text-white text-decoration-none" href="#!">Privacy</a>
               </li>
               <li>
-                <a class="text-white text-decoration-none" href="#!">Link 2</a>
+                <a class="text-white text-decoration-none" href="#!">Gestisci cookies</a>
               </li>
               <li>
-                <a class="text-white text-decoration-none" href="#!">Link 3</a>
+                <a class="text-white text-decoration-none" href="#!">Sicurezza</a>
               </li>
               <li>
-                <a class="text-white text-decoration-none" href="#!">Link 4</a>
+                <a class="text-white text-decoration-none" href="#!">Condizioni</a>
               </li>
             </ul>
           </div>
@@ -89,16 +89,16 @@
   
             <ul class="list-unstyled mb-0">
               <li>
-                <a class="text-white text-decoration-none" href="#!">Link 1</a>
+                <a class="text-white text-decoration-none" href="#!">Chi siamo</a>
               </li>
               <li>
-                <a class="text-white text-decoration-none" href="#!">Link 2</a>
+                <a class="text-white text-decoration-none" href="#!">Categorie</a>
               </li>
               <li>
-                <a class="text-white text-decoration-none" href="#!">Link 3</a>
+                <a class="text-white text-decoration-none" href="#!">Idee regalo</a>
               </li>
               <li>
-                <a class="text-white text-decoration-none" href="#!">Link 4</a>
+                <a class="text-white text-decoration-none" href="#!">Magazine</a>
               </li>
             </ul>
           </div>
