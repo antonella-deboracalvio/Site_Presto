@@ -46,8 +46,8 @@
 
             </div>
             {{-- dettagli --}}
-            <div class="row justify-content-center align-items-center mt-5 mx-3 w-100">
-                <div class="col-12 col-md-5 ms-md-5 mt-3 mt-md-0 d-flex bg-light rounded border pt-1 flex-column">
+            <div class="row justify-content-center align-items-center mt-5 mx-3 w-100 ms-0">
+                <div class="col-12 col-md-5 mt-3 mt-md-0 d-flex bg-light rounded border pt-1 flex-column">
                     <h1 class="montserrat-bold border-bottom w-100">{{ $article_to_check->title }}</h1>
                     <p class="w-50 mb-2 noto-bold w-100">{{ $article_to_check->category->name }}</p>
                     <h2 class="text-danger montserrat-bold border-top border-bottom py-1">

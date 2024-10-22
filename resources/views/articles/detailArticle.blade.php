@@ -49,7 +49,7 @@
                 <h1 class="montserrat-bold border-bottom w-100">{{ $article->title }}</h1>
 
                 <a class="btn my-bg-quar btn-info-custom w-50 mb-2 noto-bold w-100"
-                    href="{{ route('byCategory', ['category' => $article->category]) }}">{{ $article->category->name }}
+                    href="{{ route('byCategory', ['category' => $article->category]) }}">{{__("ui.". $article->category->name)}}
                     <i class="fa-solid fa-circle-right ms-1"></i></a>
                 <h2 class="text-danger montserrat-bold border-top border-bottom py-1">€{{ $article->price }} </h2>
                 <p>{{__("ui.data di creazione")}}: {{ $article->created_at->format('d/m/Y') }}</p>
