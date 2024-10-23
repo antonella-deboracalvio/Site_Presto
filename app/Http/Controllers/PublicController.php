@@ -28,5 +28,27 @@ class PublicController extends Controller
         return redirect()->back();
     }
 
+    public function searchArticlesPriceAsc($query)
+    {
+        
+        //    $articles = Article::where('category_id', $category->id)->get();
+        
+        $articles = Article::search($query)->where('is_accepted', true)->orderBy('price', 'asc')->get();
+        
+        //    dd($articles)->all();
+        return view('articles.searchedArticles', ['articles'=>$articles, 'query'=>$query]);
+    }
+
+    public function searchArticlesPriceDesc($query)
+    {
+        
+        //    $articles = Article::where('category_id', $category->id)->get();
+        
+       
+        $articles = Article::search($query)->where('is_accepted', true)->orderBy('price', 'desc')->get();
+        //    dd($articles)->all();
+        return view('articles.searchedArticles', ['articles'=>$articles, 'query'=>$query]);
+    }
+
 
 }

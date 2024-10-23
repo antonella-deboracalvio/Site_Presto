@@ -21,6 +21,12 @@ Route::get('/articles/index', [ArticleController::class, 'indexArticle'])->name(
 Route::get('/articles/asc', [ArticleController::class, 'orderByPriceAsc'])->name('orderByPriceAsc'); 
 Route::get('/articles/desc', [ArticleController::class, 'orderByPriceDesc'])->name('orderByPriceDesc'); 
 
+Route::get('/category/{category}/asc', [ArticleController::class, 'byCategoryPriceAsc'])->name('byCategoryPriceAsc');
+Route::get('/category/{category}/desc', [ArticleController::class, 'byCategoryPriceDesc'])->name('byCategoryPriceDesc');
+
+Route::get('/search/{query}/asc', [PublicController::class, 'searchArticlesPriceAsc'])->name('searchArticlesPriceAsc');
+Route::get('/search/{query}/desc', [PublicController::class, 'searchArticlesPriceDesc'])->name('searchArticlesPriceDesc');
+
 
 //rotta per mostrare le categorie
 Route::get('/category/{category}/detail', [ArticleController::class, 'byCategory'])->name('byCategory');

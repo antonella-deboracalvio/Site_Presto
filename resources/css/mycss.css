@@ -304,6 +304,16 @@ main{
 
 /* INDEX */
 
+.orderBy-custom{
+    margin-left: -8rem;
+    margin-bottom: 1rem;
+}
+
+.orderBy-filter:hover{
+    background-color: var(--quar) !important;
+    color: var(--main) !important;
+}
+
 .card {
     width: auto;
 }
@@ -631,6 +641,15 @@ main{
     /* FINE OFFCANVAS */
 
     /* INDEX */
+
+
+    .orderBy-custom{
+        margin-left: 17.7rem;
+        
+        margin-bottom: 1rem;
+    }
+
+
     .card-container-custom {
         width: auto;
         height: auto;

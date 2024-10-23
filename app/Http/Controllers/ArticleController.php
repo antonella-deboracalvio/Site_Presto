@@ -57,4 +57,27 @@ class ArticleController extends Controller implements HasMiddleware
         $articles = Article::where('is_accepted', true)->orderBy('price', 'desc')->paginate(6);
         return view('articles.indexArticle', compact('articles'));
     }
+
+
+    public function byCategoryPriceAsc(Article $article, Category $category)
+    {
+        
+        //    $articles = Article::where('category_id', $category->id)->get();
+        
+        $articles = Article::where('is_accepted', true)->where('category_id', $category->id)->orderBy('price', 'asc')->get();
+        //    dd($articles)->all();
+        return view('articles.byCategory', ['articles'=>$articles, 'category'=>$category]);
+    }
+
+    public function byCategoryPriceDesc(Article $article, Category $category)
+    {
+        
+        //    $articles = Article::where('category_id', $category->id)->get();
+        
+        $articles = Article::where('is_accepted', true)->where('category_id', $category->id)->orderBy('price', 'desc')->get();
+        //    dd($articles)->all();
+        return view('articles.byCategory', ['articles'=>$articles, 'category'=>$category]);
+    }
+
+    
 }
