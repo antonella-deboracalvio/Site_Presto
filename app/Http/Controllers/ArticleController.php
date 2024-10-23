@@ -39,7 +39,7 @@ class ArticleController extends Controller implements HasMiddleware
         
         //    $articles = Article::where('category_id', $category->id)->get();
         
-        $articles = Article::where('is_accepted', true)->where('category_id', $category->id)->get();
+        $articles = Article::where('is_accepted', true)->where('category_id', $category->id)->paginate(6);
         //    dd($articles)->all();
         return view('articles.byCategory', ['articles'=>$articles, 'category'=>$category]);
     }

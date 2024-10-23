@@ -8,7 +8,7 @@
     @endif
 
     <div class="container">
-        <div class="row justify-content-center align-items-center">
+        <div class="row justify-content-center align-items-center ">
             <div class="col-12 mt-3">
                 <div>
                     <h1 class="display-3 text-center montserrat-bold">
@@ -85,7 +85,7 @@
 
                         </div>
                         {{-- labels --}}
-                        <div class="col-12 col-md-2 h-100 mt-2 mt-md-0 px-4 ps-5 px-md-0 ">
+                        <div class="col-12 col-md-2 h-100 mt-4 mt-md-0 px-4 ps-5 px-md-0 ">
                             <div class="card-body">
                                 <h5 class="noto-bold">Labels</h5>
                                 @if ($image->labels)
@@ -101,13 +101,15 @@
 
                     @endforeach
                 @else
+            
                     <div class="row justify-content-center">
-                        @for ($i = 0; $i < 6; $i++)
-                            <div class="col-12 col-md-4 mt-3">
-                                <img src="https://mdbootstrap.com/img/new/standard/nature/111.webp"
+                      
+                            <div class="col-12 col-md-4 mt-3 d-flex flex-column align-items-center">
+                                <h2 class="text-center">L'utente non ha caricato alcuna immagine</h2>
+                                <img src="/storage/img/default.jpg"
                                     alt="Immagine segnaposto" class="img-fluid rounded shadow">
                             </div>
-                        @endfor
+                    
                     </div>
                 @endif
 
@@ -130,7 +132,7 @@
                 </div>
 
 
-                <div class="col-12 mt-3 d-flex justify-content-center">
+                <div class="col-12 mt-3 d-flex justify-content-center mb-5">
                     <form action="{{ route('rejectArticle', ['article' => $article_to_check]) }}" method="POST">
                         @csrf
                         @method('PATCH')

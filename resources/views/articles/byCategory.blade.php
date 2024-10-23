@@ -42,4 +42,12 @@
             @endforelse
         </div>
     </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center my-5">
+                {{ $articles->links('pagination::bootstrap-5') }}
+            </div>
+        </div>
+    </div>
 </x-layout>
