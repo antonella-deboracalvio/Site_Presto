@@ -9,25 +9,26 @@
 
         {{-- Ordina per --}}
         
-        
-        <div class="col-12 dropdown orderBy-custom">
-            <button class="btn my-bg-quar btn-info-custom dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Ordina per
-            </button>
-            <ul class="dropdown-menu">
-                
-                <li><a class="dropdown-item orderBy-filter" href="{{ route('searchArticlesPriceAsc',['query' => $query]) }}">Dal meno caro</a></li>
-                
-                <hr class="dropdown-divider m-0">
-                
-                <li><a class="dropdown-item orderBy-filter" href="{{ route('searchArticlesPriceDesc',['query' => $query]) }}">Dal più caro</a></li>
-                
-                <hr class="dropdown-divider m-0">
-                
-                <li><a class="dropdown-item orderBy-filter" href="{{ route('searchArticles', ['query' => $query]) }}">Dal più recente</a></li>
-                
-            </ul>
-        </div>
+        @if ($articles->count() > 0)
+            <div class="col-12 dropdown orderBy-custom">
+                <button class="btn my-bg-quar btn-info-custom dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Ordina per
+                </button>
+                <ul class="dropdown-menu">
+                    
+                    <li><a class="dropdown-item orderBy-filter" href="{{ route('searchArticlesPriceAsc',['query' => $query]) }}">Dal meno caro</a></li>
+                    
+                    <hr class="dropdown-divider m-0">
+                    
+                    <li><a class="dropdown-item orderBy-filter" href="{{ route('searchArticlesPriceDesc',['query' => $query]) }}">Dal più caro</a></li>
+                    
+                    <hr class="dropdown-divider m-0">
+                    
+                    <li><a class="dropdown-item orderBy-filter" href="{{ route('searchArticles', ['query' => $query]) }}">Dal più recente</a></li>
+                    
+                </ul>
+            </div>
+        @endif
         
         {{-- fine Ordina per --}}
 
