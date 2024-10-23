@@ -1,11 +1,11 @@
 <x-layout>
-    <div class="container">
+    <div class="container justify-content-center">
         <div class="row">
             <div class="col-12 my-3">
                 <h1 class="my-text-main fw-bold text-center display-1 noto-bold">{{__("ui.all articles")}}</h1>
             </div>
         </div>
-        <div class="row w-100 justify-content-evenly">
+        <div class="row justify-content-evenly px-3 px-md-0">
             @forelse ($articles as $article)
             <div class="col-12 col-md-4 mt-4 justify-content-center d-flex">
                 <x-card :article="$article" />

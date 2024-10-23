@@ -13,9 +13,16 @@
                     <span class="my-text-acc fw-bolder display-1 montserrat-bold">{{__("ui.presto")}}! <br> </span>  {{__($frase)}}
                 </h1>
             </div>
-            <div class="col-12 col-md-5 d-flex justify-content-center px-5 mb-3 mb-md-0 align-items-center wrapper-btn-info-header-custom">
-                <a class="my-text-main w-100 text-center btn-info-header-custom text-decoration-none my-bg-quar rounded py-3 fw-bold" href="{{ route('createArticle') }}">{{__("ui.insert an article")}}!</a>
-            </div>
+            @auth
+                <div class="col-12 col-md-5 d-flex justify-content-center px-5 mb-3 mb-md-0 align-items-center wrapper-btn-info-header-custom">
+                    <a class="my-text-main w-100 text-center btn-info-header-custom text-decoration-none my-bg-quar rounded py-3 fw-bold" href="{{ route('createArticle') }}">{{__("ui.insert an article")}}!</a>
+                </div>
+            @else
+                <div class="col-12 col-md-5 d-flex justify-content-center px-5 mb-3 mb-md-0 align-items-center wrapper-btn-info-header-custom">
+                    <button class="btn my-text-main w-100 text-center btn-info-header-custom text-decoration-none my-bg-quar rounded py-3 fw-bold login-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">{{__("ui.insert an article")}}!</button>
+                </div>
+            @endauth
+            
         </div>
     </header>
 
@@ -48,7 +55,6 @@
             @endforelse
         </div>
     </div>
-
 
 
 </x-layout>

@@ -6,7 +6,7 @@
                         class="my-text-acc">{{ $query }}</span></h1>
             </div>
         </div>
-        <div class="row w-100 justify-content-evenly">
+        <div class="row justify-content-evenly px-3 px-md-0">
             @forelse ($articles as $article)
                 <div class="col-12 col-md-4 mt-4 justify-content-center d-flex">
                     <x-card :article="$article" />

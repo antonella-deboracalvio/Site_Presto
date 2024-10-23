@@ -22,36 +22,22 @@
         {{-- immagini --}}
 
         @if ($article_to_check)
-            <div class="row justify-content-center align-items-center mt-5">
+            <div class="row justify-content-evenly align-items-center mt-5 bg-light py-5 rounded mx-1 border">
 
                 @if ($article_to_check->images->count())
 
                     @foreach ($article_to_check->images as $key => $image)
-                        <div class="col-6 col-md-4 d-flex justify-content-evenly align-items-center">
-                            <img class="revisor-image-custom mb-5" src="{{ $image->getUrl(300, 300) }}"
+                        <div class="col-6 col-md-4 d-flex justify-content-evenly align-items-center  p-3 mt-4">
+                            <img class="revisor-image-custom rounded" src="{{ $image->getUrl(300, 300) }}"
                                 alt="Immagine {{ $key + 1 }} dell'articolo {{ $article_to_check->title }}"
                                 class="img-fluid">
                         </div>
 
-                        {{-- labels --}}
-                        <div class="col-md-5 ps-3">
-                            <div class="card-body">
-                                <h5>Labels</h5>
-                                @if ($image->labels)
-                                    @foreach ($image->labels as $label)
-                                        #{{ $label }}
-                                    @endforeach
-                                @else
-                                <p class="fst-italic">No labels</p>
-                                @endif
-                            </div>
-                        </div>
-
 
                         {{-- ratings --}}
-                        <div class="col-md-3">
+                        <div class="col-5 col-md-3 h-100 ps-3">
                             <div class="card-body">
-                                <h5>
+                                <h5 class="noto-bold">
                                     Ratings
                                 </h5>
                                 <div class="row justify-content-center">
@@ -98,6 +84,21 @@
                             </div>
 
                         </div>
+                        {{-- labels --}}
+                        <div class="col-12 col-md-2 h-100 mt-2 mt-md-0 px-4 ps-5 px-md-0 ">
+                            <div class="card-body">
+                                <h5 class="noto-bold">Labels</h5>
+                                @if ($image->labels)
+                                    @foreach ($image->labels as $label)
+                                        #{{ $label }}
+                                    @endforeach
+                                @else
+                                <p class="fst-italic">No labels</p>
+                                @endif
+                            </div>
+                        </div>
+
+
                     @endforeach
                 @else
                     <div class="row justify-content-center">
