@@ -15,20 +15,20 @@ class ArticleController extends Controller implements HasMiddleware
     {
         return view('articles.createArticleForm');
     }
-
+    
     public static function middleware(): array{
         return [
             new Middleware('auth', only: ['createArticle']),
         ];
     }
-
+    
     public function indexArticle()
     {
-
+        
         $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(6);
         return view('articles.indexArticle', compact('articles'));
     }
-
+    
     public function detailArticle(Article $article)
     {
         return view('articles.detailArticle', compact('article'));
@@ -37,12 +37,25 @@ class ArticleController extends Controller implements HasMiddleware
     public function byCategory(Article $article, Category $category)
     {
         
-    //    $articles = Article::where('category_id', $category->id)->get();
-
+        //    $articles = Article::where('category_id', $category->id)->get();
+        
         $articles = Article::where('is_accepted', true)->where('category_id', $category->id)->get();
-    //    dd($articles)->all();
+        //    dd($articles)->all();
         return view('articles.byCategory', ['articles'=>$articles, 'category'=>$category]);
     }
-    
 
+
+    // Ordina per
+    
+    public function orderByPriceAsc()
+    {
+        $articles = Article::where('is_accepted', true)->orderBy('price', 'asc')->paginate(6);
+        return view('articles.indexArticle', compact('articles'));
+    }
+    public function orderByPriceDesc()
+    {
+        $articles = Article::where('is_accepted', true)->orderBy('price', 'desc')->paginate(6);
+        return view('articles.indexArticle', compact('articles'));
+    }
+    
 }

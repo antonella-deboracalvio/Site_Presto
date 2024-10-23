@@ -17,6 +17,11 @@ Route::get('/articles/detail/{article}', [ArticleController::class, 'detailArtic
 //rotta dell'index di tutti gli articoli inseriti
 Route::get('/articles/index', [ArticleController::class, 'indexArticle'])->name('indexArticle'); 
 
+// rotte per l'ordine di visualizzazione
+Route::get('/articles/asc', [ArticleController::class, 'orderByPriceAsc'])->name('orderByPriceAsc'); 
+Route::get('/articles/desc', [ArticleController::class, 'orderByPriceDesc'])->name('orderByPriceDesc'); 
+
+
 //rotta per mostrare le categorie
 Route::get('/category/{category}/detail', [ArticleController::class, 'byCategory'])->name('byCategory');
 
