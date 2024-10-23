@@ -120,7 +120,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
+body{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.555), rgba(255, 255, 255, 0.555)), url('/storage/app/public/img/sfondo.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 main{
     min-height: 70vh;
@@ -194,6 +199,10 @@ main{
     background-position: center;
     background-size: cover;
     height: 70vh;
+}
+
+.card-welcome{
+    margin-bottom: 100px;
 }
 
 .articles-home {
@@ -464,7 +473,7 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 75vh;
+    height: 80vh !important;
 }
 
 .img-preview{
@@ -495,13 +504,6 @@ main{
 
 /* FINE FORM ARTICOLO */
 
-
-
-/*Footer */
-
-.footerCustom {
-    margin-top: 150px;
-}   
 
 /* media query */
 
@@ -574,6 +576,10 @@ main{
         background-position: center;
         background-size: cover;
         height: 25vh;
+    }
+
+    .card-welcome{
+        margin-bottom: 70px;
     }
 
     .wrapper-btn-info-header-custom {
@@ -654,4 +660,12 @@ main{
     
         width: 150px;
     }
+
+
+
+    /* FOOTER */
+
+    .footerCustom {
+        margin-top: 100px;
+    }   
 }

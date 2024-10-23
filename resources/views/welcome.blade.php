@@ -31,7 +31,7 @@
     <div class="testo-scorrevole h-auto my-bg-main py-md-5">
         <span class="my-text-quar display-3 fw-bolder py-2 montserrat-bold">{{__("ui.non perderti le ultime occasioni fai")}}...<span class="my-text-acc montserrat-bold"><span></span> {{__("ui.presto")}}!</span> </span>
     </div>
-    <div class="wrapper container-fluid ">
+    <div class="wrapper container-fluid card-welcome">
         
         <div class="row justify-content-evenly">
             
