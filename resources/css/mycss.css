@@ -142,11 +142,7 @@ main{
         0px 18px 80px rgba(0, 0, 0, 0.12);
 }
 
-/* .container-lang{
-    position: absolute;
-    top: 8px;
-    right: 60px;
-} */
+
 
 .btn-flag{
     transition: 0.5s !important;
@@ -176,6 +172,11 @@ main{
 
 .navbar-brand img {
     width: 150px;
+}
+
+.dropdownCustom{
+    border-color: 1px solid black !important;
+    background-color: white !important;
 }
 
 .notifica-revisore {
@@ -535,6 +536,10 @@ main{
         right: 5px;
     }
 
+    .dropdown-categorie-navbar{
+        height: fit-content;
+    }
+
 
 
     /* FINE NAVBAR */
@@ -542,14 +547,22 @@ main{
 
     /* DROPDOWN */
     .dropdownCustom{
+        border: 0px !important;
         width: 100px;
         font-size: 0.5rem;
-        text-align: center;
-        margin-top: 30px !important;
-        width: 100% !important; 
+        background-color: transparent !important;
+        width: fit-content; 
         padding: 0px !important;
         font-size: 20px;
-        text-align: center;
+    }
+
+    .contenitore-categoria-navbar{
+        border-radius: 8px;
+        background-color: var(--quar);
+    }
+
+    .dropdown-divider{
+        display: none !important;
     }
 
 

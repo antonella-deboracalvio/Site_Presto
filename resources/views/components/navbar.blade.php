@@ -18,23 +18,23 @@
                     </a>
                 </li>
 
-                <li class="nav-item list-unstyled d-flex dropdown">
+                <li class="nav-item list-unstyled dropdown">
                 {{-- tutte le categorie --}}
-                    <a class="nav-link dropdown-toggle text-white link-navbar " href="#" role="button"
+                    <a class="nav-link dropdown-toggle text-white link-navbar" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         {{ __('ui.categories') }}
                     </a>
-                    <ul class="dropdown-menu text-align-center dropdownCustom">
+                    <div class="dropdown-menu dropdownCustom w-100 bg-transparent justify-content-sm-start">
                         @foreach ($categories as $category)
-                            <li> 
-                                <a class="dropdown-item categorie-navbar"
+
+                                <a class="text-decoration-none my-text-main text-nowrap py-md-2 contenitore-categoria-navbar d-inline-block categorie-navbar px-2 mt-2 mt-md-0 d-lg-block"
                                     href="{{ route('byCategory', ['category' => $category]) }}">{{ __("ui.$category->name") }}</a>
-                            </li>
+                            
                             @if (!$loop->last)
-                                <hr class="dropdown-divider">
+                                <hr class="dropdown-divider m-0">
                             @endif
                         @endforeach
-                    </ul>
+                    </div>
                 </li>
             </ul>
 
