@@ -659,7 +659,7 @@ main{
     .icon-heart{
         position: absolute;
         top:10px;
-        left: 85%;
+        left: 83%;
         font-size: 2rem;   
         z-index: 100;
         opacity: 0.5;

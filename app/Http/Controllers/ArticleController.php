@@ -15,12 +15,24 @@ class ArticleController extends Controller implements HasMiddleware
     {
         return view('articles.createArticleForm');
     }
+
+
+
+
+
     
     public static function middleware(): array{
         return [
             new Middleware('auth', only: ['createArticle']),
         ];
     }
+
+
+
+
+
+
+
     
     public function indexArticle()
     {
@@ -28,11 +40,29 @@ class ArticleController extends Controller implements HasMiddleware
         $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(6);
         return view('articles.indexArticle', compact('articles'));
     }
+
+
+
+
+
     
     public function detailArticle(Article $article)
     {
-        return view('articles.detailArticle', compact('article'));
+        if(Article::where('is_accepted', true)->where('category_id', $article->category_id)->count() > 3){
+            $suggestions = Article::where('is_accepted', true)->where('category_id', $article->category_id)->take(3)->get();
+        } else {
+            $suggestions = Article::where('is_accepted', true)->where('category_id', $article->category_id)->get();
+        }
+
+        // dd($article->category->id);
+
+        return view('articles.detailArticle', compact('article'), compact('suggestions'));
     }
+
+
+
+
+
     
     public function byCategory(Article $article, Category $category)
     {
@@ -45,6 +75,9 @@ class ArticleController extends Controller implements HasMiddleware
     }
 
 
+
+
+
     // Ordina per
     
     public function orderByPriceAsc()
@@ -52,11 +85,17 @@ class ArticleController extends Controller implements HasMiddleware
         $articles = Article::where('is_accepted', true)->orderBy('price', 'asc')->paginate(6);
         return view('articles.indexArticle', compact('articles'));
     }
+
+
     public function orderByPriceDesc()
     {
         $articles = Article::where('is_accepted', true)->orderBy('price', 'desc')->paginate(6);
         return view('articles.indexArticle', compact('articles'));
     }
+
+
+
+
 
 
     public function byCategoryPriceAsc(Article $article, Category $category)

@@ -45,7 +45,7 @@
 
 
             </div>
-            <div class="col-12 col-md-5 ms-md-5 mt-3 mt-md-0 d-flex bg-light rounded border pt-1 flex-column">
+            <div class="col-11 col-md-5 ms-md-5 mt-3 mt-md-0 mx-2 me-md-0 d-flex bg-light rounded border pt-1 flex-column">
                 <h1 class="montserrat-bold border-bottom w-100">{{ $article->title }}</h1>
 
                 <a class="btn my-bg-quar btn-info-custom w-50 mb-2 noto-bold w-100"
@@ -60,6 +60,19 @@
                 <p class="d-block mb-1 noto-bold border-top pt-2">{{__("ui.description")}}:</p>
                 <p> {{ $article->description }}</p>
             </div>
+        </div>
+
+        <div class="row justify-content-evenly px-3 px-md-0 mt-5 bg-light py-5 rounded mx-1 border mb-5">
+            <h2 class="text-center noto-bold">Articoli correlati</h2>
+            @forelse ($suggestions as $suggestion)
+            <div class="col-12 col-md-4 mt-4 justify-content-center d-flex">
+                <x-card :article="$suggestion" />
+            </div>
+            @empty
+            <div class="col-5">
+                <h3 class="text-center noto-bold">{{__("ui.no article")}}</h3>
+            </div>
+            @endforelse
         </div>
     </div>
 
