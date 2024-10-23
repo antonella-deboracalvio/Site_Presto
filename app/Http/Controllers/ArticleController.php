@@ -57,5 +57,4 @@ class ArticleController extends Controller implements HasMiddleware
         $articles = Article::where('is_accepted', true)->orderBy('price', 'desc')->paginate(6);
         return view('articles.indexArticle', compact('articles'));
     }
-    
 }
