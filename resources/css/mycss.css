@@ -314,6 +314,14 @@ main{
     color: var(--main) !important;
 }
 
+.immagine-card{
+    height: 300px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
 .card {
     width: auto;
 }
@@ -514,6 +522,12 @@ main{
 
 /* FINE FORM ARTICOLO */
 
+/* DETTAGLIO ARTICOLO */
+.carosello{
+    max-width: 648px;
+    max-height: 648px;
+}
+
 
 /* media query */
 
@@ -649,10 +663,27 @@ main{
         margin-bottom: 1rem;
     }
 
+    .immagine-card{
+        height: auto;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+    
+
 
     .card-container-custom {
         width: auto;
         height: auto;
+    }
+
+    /* FINE INDEX */
+
+    /* DETTAGLIO ARTICOLO */
+    .carosello{
+        max-width: 398px;
+        max-height: 398px;
     }
 
     /* ICONA */
