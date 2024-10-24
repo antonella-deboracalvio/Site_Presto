@@ -49,9 +49,9 @@ class ArticleController extends Controller implements HasMiddleware
     public function detailArticle(Article $article)
     {
         if(Article::where('is_accepted', true)->where('category_id', $article->category_id)->count() > 3){
-            $suggestions = Article::where('is_accepted', true)->where('category_id', $article->category_id)->take(3)->get();
+            $suggestions = Article::where('is_accepted', true)->where('category_id', $article->category_id)->where('id', '!=', $article->id)->take(3)->get();
         } else {
-            $suggestions = Article::where('is_accepted', true)->where('category_id', $article->category_id)->get();
+            $suggestions = Article::where('is_accepted', true)->where('category_id', $article->category_id)->where('id', '!=', $article->id)->get();
         }
 
         // dd($article->category->id);
