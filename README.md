@@ -24,5 +24,3 @@ Gli utenti possono richiedere di diventare revisori, e la richiesta sarà inviat
 
 <h3>Deployment</h3>
 Il sito non è stato messo online e non è disponibile pubblicamente.
-
-<h3>Contributors</h3>
